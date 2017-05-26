@@ -16,25 +16,25 @@ class AuthController extends BaseController
 
 	public function __construct()
 	{
-		$this->guard = Auth::guard( 'admin' );
+		$this->guard = Auth::guard('admin');
 	}
 
 	public function login()
 	{
-		return $this->view( 'login' );
+		return $this->view('login');
 	}
 
-	public function authorize( Request $request )
+	public function authorize(Request $request)
 	{
-		$this->validate( $request, [ 'email'	=> 'required|email', 'password' => 'required' ] );
+		$this->validate($request, ['email' => 'required|email', 'password' => 'required']);
 
-		$credentials = $request->only( ['email', 'password' ] );
-		$remember = $request->get( 'remember', false ) == 1 ? true : false ;
+		$credentials = $request->only(['email', 'password']);
+		$remember = $request->get('remember', false) == 1 ? true : false;
 
-		if( $this->guard->attempt( $credentials, $remember ) ) {
-			return redirect()->route( 'admin.dashboard' )->withSuccess( 'Zalogowano pomyślnie!' );
+		if($this->guard->attempt($credentials, $remember)) {
+			return redirect()->route('admin')->withSuccess('Zalogowano pomyślnie!');
 		}
-		return redirect()->back()->withErrors( 'Podałeś/aś niepoprawne dane!');
+		return redirect()->back()->withErrors('Podałeś/aś niepoprawne dane!');
 	}
 
 	public function logout()
@@ -50,41 +50,39 @@ class AuthController extends BaseController
 
 	public function reset( Request $request )
 	{
-		$this->validate( $request, [ 'email' => 'required|email' ] );
+		$this->validate($request, ['email' => 'required|email']);
 
-		$user = Admin::where( 'email', '=', $request->get('email') )->first();
+		$user = Admin::where('email', '=', $request->get('email'))->first();
 
-		if( $user != null ) {
+		if($user != null) {
 			$user->resetPassword();
 		}
 
-		return redirect()->route( 'admin.login' )->withSuccess( 'Jeżeli podałeś prawidłowy adres to została wysłana na niego wiadomość z instrukcją!' );
-
+		return redirect()->route('admin.login')->withSuccess('Jeżeli podałeś prawidłowy adres to została wysłana na niego wiadomość z instrukcją!');
 	}
 
-	public function token( $token )
+	public function token($token)
 	{
-		$user = Admin::findByToken( $token );
+		$user = Admin::findByToken($token);
 
-		if( $user === null ) {
+		if($user === null) {
 			return redirect()->route('admin.login')->withErrors('Niepoprawny token!');
 		}
 
-		return $this->view( 'reset' );
+		return $this->view('reset');
 	}
 
-	public function store( Request $request, $token )
+	public function store(Request $request, $token)
 	{
-		$this->validate( $request, [ 'password' => 'required|min:8', 'repeat_password' => 'required|same:password' ] );
+		$this->validate($request, ['password' => 'required|min:8', 'repeat_password' => 'required|same:password']);
 
-		$user = Admin::findByToken( $token );
-
-		if( $user === null ) {
+		$user = Admin::findByToken($token);
+		if($user === null) {
 			return redirect()->route('admin.login')->withErrors('Niepoprawny token!');
 		}
 
-		$user->setPassword( $request->input('password') )->save();
+		$user->setPassword($request->input('password'))->save();
 
-		return redirect()->route( 'admin.login' )->withSuccess('Hasło zostało zmienione');
+		return redirect()->route('admin.login')->withSuccess('Hasło zostało zmienione');
 	}
 }

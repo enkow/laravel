@@ -23,26 +23,26 @@ abstract class AbstractUser extends Model implements Authenticatable
 
 	public static function findByToken( $token )
 	{
-        // prevent finding zero-length roken in database
-        if( strlen( $token ) < 16 ) return null;
+    // prevent finding zero-length token in database
+    if( strlen( $token ) < 16 ) return null;
 
 		return ( new static )->where( 'reset_token', '=', $token )->first();
 	}
 
-    public function setPassword( $password )
-    {
-        $this->setAttribute( 'password', $password );
-        $this->setAttribute('reset_token', '_');
-        return $this;
-    }
+  public function setPassword( $password )
+  {
+    $this->setAttribute( 'password', $password );
+    $this->setAttribute('reset_token', '_');
+    return $this;
+  }
 
 	public function resetPassword()
 	{
 		$token = $this->generateResetToken();
-		$mail = $this->mail;
+		$mail = $this->email;
 
 		$sent = app('mailer')->send( $this->view, [ 'token' => $token ], function ( $mailer ) use ( $mail ) {
-            $mailer->to( $mail )->subject( '[ BUDMAT ] Reset hasła' );
+            $mailer->to( $mail )->subject( '[ ADMIN ] Reset hasła' );
         });
 
         return $sent;

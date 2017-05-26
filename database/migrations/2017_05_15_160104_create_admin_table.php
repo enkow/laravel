@@ -17,7 +17,6 @@ class CreateAdminTable extends Migration
           $table->increments('id');
           $table->string('email');
           $table->string('password');
-          $table->string('login');
           $table->string('remember_token')->nullable();
           $table->string('reset_token')->nullable();
           $table->timestamp('last_login')->nullable();
