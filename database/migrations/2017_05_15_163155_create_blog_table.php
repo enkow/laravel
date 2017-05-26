@@ -48,6 +48,8 @@ class CreateBlogTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blog');
+      Schema::dropIfExists('blog_tags');
+      Schema::dropIfExists('blog');
+      Schema::dropIfExists('tags');
     }
 }
