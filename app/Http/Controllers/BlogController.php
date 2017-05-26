@@ -10,7 +10,7 @@ use App\Http\Controllers\BaseController;
 
 class BlogController extends BaseController
 {
-  protected $prefix = 'superadmin.blog';
+  protected $prefix = 'admin.blog';
 
   public function index()
   {
@@ -21,23 +21,23 @@ class BlogController extends BaseController
 
   public function create()
   {
-    return $this->view( 'create' );
+    return $this->view('create');
   }
 
   public function store(Request $request)
   {
     $this->validate($request, [
         'name' => 'required',
+        'photo' => 'required',
         'content' => 'required',
-        'foto' => 'required',
     ]);
 
     $post = new Blog;
-    $post->mapRequest( '*' );
+    $post->mapRequest('*');
     $post->slug = str_slug($post->name);
 
     if( $post->save() ) {
-      return redirect()->route('superadmin.blog.index' )->withSuccess('Post został dodany!');
+      return redirect()->route('admin.blog.index' )->withSuccess('Post został dodany!');
     }
     return redirect()->back()->withInput()->withErrors('Post nie został zapisany! Spróbuj ponownie.');
   }
@@ -59,7 +59,7 @@ class BlogController extends BaseController
     $blog->slug = str_slug($blog->name);
     $blog->save();
 
-    return redirect()->route('superadmin.blog.index')->withSuccess( 'Post został zapisany!' );
+    return redirect()->route('admin.blog.index')->withSuccess( 'Post został zapisany!' );
   }
 
   public function delete(Blog $blog)
