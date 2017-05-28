@@ -8,7 +8,7 @@ class Tag extends Model
 
 	protected $table = 'tags';
 
-  public function blogs()
+  public function posts()
 	{
 		return $this->belongsToMany(Blog::class, 'blog_tags', 'tag_id', 'blog_id');
 	}

@@ -35,7 +35,15 @@ class AppServiceProvider extends ServiceProvider
         return view('form.seo');
       });
 
-      Route::macro('rest', function ($name, $controller, $subname = null, $actions = ['index', 'show', 'create', 'update', 'delete']){
+      Form::macro('img', function ( $name, $field, $attributes = [], $dir = 'img'  ) {
+        return view('form.image', compact( 'name', 'field', 'attributes', 'dir' ) );
+      });
+
+      Form::macro('dropdown', function ( $name, $field, $array, $attributes = [] ) {
+        return view('form.dropdown', compact( 'name', 'field', 'array', 'attributes' ) );
+      });
+
+      Route::macro('rest', function ($name, $controller, $subname = null, $actions = ['index', 'show', 'create', 'edit', 'delete']){
         if (in_array('index', $actions)) {
           Route::get($name, [ 'as' => $subname.'.'.$name.'.index', 'uses' => $controller.'@index' ]);
         }

@@ -4,6 +4,9 @@
 		<meta charset="UTF-8">
 		<title>Panel administracyjny</title>
 		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<meta name="csrf-token" content="{{ csrf_token() }}">
+
+		<script src="{{url('/adminlte')}}/plugins/pace/pace.js"></script>
 		<!-- Bootstrap 3.3.2 -->
 		<link href="{{url('/adminlte')}}/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<!-- Font Awesome Icons -->
@@ -13,11 +16,17 @@
 		<!-- Theme style -->
 		<link href="{{url('/adminlte')}}/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
 
+		<link href="{{url('/adminlte')}}/dist/css/app.css" rel="stylesheet" type="text/css" />
+
 		<link href="{{url('/adminlte')}}/plugins/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
 
 		<link href="{{url('/adminlte')}}/dist/css/skins/skin-blue.min.css" rel="stylesheet" type="text/css" />
 
+		<link href="{{url('/adminlte')}}/plugins/pace/flat-top.css" rel="stylesheet" >
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.0.1/sweetalert.min.css" type="text/css">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" type="text/css">
 
 		<!--[if lt IE 9]>
 				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -46,7 +55,7 @@
 			<header class="main-header">
 
 				<!-- Logo -->
-				<a href="#" class="logo">
+				<a href="{{ route('admin') }}" class="logo">
 					<span class="logo-lg">Admin<b>CM</b></span>
 				</a>
 
@@ -63,8 +72,8 @@
 				@include('admin.template.navbar')
 			</aside>
 
-			
-			<div class="content-wrapper" style="position: relative;">	
+
+			<div class="content-wrapper" style="position: relative;">
 				@yield('content')
 			</div>
 
@@ -84,11 +93,13 @@
 		<script src="{{url('/adminlte')}}/plugins/jQuery/jQuery-2.1.3.min.js"></script>
 		<script src="{{url('/adminlte')}}/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="{{url('/adminlte')}}/dist/js/app.min.js" type="text/javascript"></script>
+		<script src="{{url('/adminlte')}}/plugins/uglipop/uglipop.min.js" type="text/javascript"></script>
 		<script src="{{url('/adminlte')}}/plugins/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
 		<script src="{{url('/adminlte')}}/dist/js/custom.js" type="text/javascript"></script>
 		<script src="{{url('/adminlte')}}/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.0.1/sweetalert.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+		<script src="{{url('/adminlte')}}/dist/js/img.js" type="text/javascript"></script>
 
 		<script>
 			$( document ).ready(function(){

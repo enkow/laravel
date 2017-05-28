@@ -1,0 +1,10 @@
+.upload-preview {
+  cursor: pointer;
+}
+.select2-selection__choice {
+    color: black !important;
+}
+.select2-selection--multiple {
+    border-radius: 0 !important;
+    border-color: #d2d6de !important;
+}

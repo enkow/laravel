@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ Config::get('app.url') }}">Strona główna</a>
+                    <a href="{{ route('admin') }}">Strona główna</a>
                 </div>
             </div>
         </div>

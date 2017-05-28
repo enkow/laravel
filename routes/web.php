@@ -28,5 +28,8 @@ Route::post('/admin/reset/{token}', ['as' => 'admin.reset.store', 'uses' => 'Aut
 
 Route::group( ['prefix' => 'admin'], function () {
     Route::get( '/logout', [ 'as' => 'admin.logout', 'uses' => 'AuthController@logout'] );
-    Route::rest('blog', 'BlogController', 'admin', ['index', 'create', 'update', 'delete']);
+    Route::rest('tag', 'TagController', 'admin', ['index', 'create', 'edit', 'delete']);
+    Route::rest('blog', 'BlogController', 'admin', ['index', 'create', 'edit', 'delete']);
+
+    Route::post('/ajax/upload/{dir}', ['as' => 'ajax.upload', 'uses' => 'AjaxController@upload']);
 });

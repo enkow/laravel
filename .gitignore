@@ -6,3 +6,6 @@
 Homestead.json
 Homestead.yaml
 .env
+
+/public/img/*
+!/public/img/.gitkeep

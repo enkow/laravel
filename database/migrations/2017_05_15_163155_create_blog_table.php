@@ -16,7 +16,6 @@ class CreateBlogTable extends Migration
         Schema::create('tags', function (Blueprint $table) {
           $table->increments('id');
           $table->string('name');
-          $table->text('content');
           $table->string('seo_title')->nullable();
           $table->string('seo_description')->nullable();
           $table->string('seo_keywords')->nullable();
@@ -28,6 +27,7 @@ class CreateBlogTable extends Migration
           $table->string('name');
           $table->string('photo');
           $table->text('content');
+          $table->string('slug');
           $table->string('seo_title')->nullable();
           $table->string('seo_description')->nullable();
           $table->string('seo_keywords')->nullable();

@@ -14,4 +14,13 @@ class Blog extends AbstractUser
 	{
 		return $this->belongsToMany(Tag::class, 'blog_tags', 'blog_id', 'tag_id');
 	}
+
+	public function getTagListAttribute()
+	{
+	     if (!$this->tags->isEmpty()) {
+				 return $this->tags->pluck('id', 'name')->toArray();
+			 }
+
+			 return array();
+	}
 }
