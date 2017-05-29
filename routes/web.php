@@ -30,6 +30,9 @@ Route::group( ['prefix' => 'admin'], function () {
     Route::get( '/logout', [ 'as' => 'admin.logout', 'uses' => 'AuthController@logout'] );
     Route::rest('tag', 'TagController', 'admin', ['index', 'create', 'edit', 'delete']);
     Route::rest('blog', 'BlogController', 'admin', ['index', 'create', 'edit', 'delete']);
+    Route::rest('project', 'ProjectController', 'admin', ['index', 'create', 'edit', 'delete']);
 
     Route::post('/ajax/upload/{dir}', ['as' => 'ajax.upload', 'uses' => 'AjaxController@upload']);
+    Route::post('/ajax/upload/gallery/{project}', ['as' => 'ajax.upload.gallery', 'uses' => 'AjaxController@uploadGallery']);
+    Route::post('/ajax/remove/{photo}', ['as' => 'ajax.remove.gallery', 'uses' => 'AjaxController@removeGallery']);
 });

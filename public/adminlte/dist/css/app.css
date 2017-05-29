@@ -8,3 +8,178 @@
     border-radius: 0 !important;
     border-color: #d2d6de !important;
 }
+
+/************************************/
+/*            GALERIA              */
+/***********************************/
+.icheckbox_square-blue {
+  vertical-align: top;
+}
+
+label > span.text {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  color: #3d3d3d;
+}
+
+#uglipop_overlay_wrapper, #uglipop_content_fixed {
+  z-index: 999;
+}
+
+.upload-preview {
+  cursor: pointer;
+}
+
+.img-preview {
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.img-preview img {
+  border: 1px solid #cecece;
+}
+
+.img-preview .img-delete {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+
+.sidebar-menu a[href="#"]:not( .expand-tree-view ) {
+  opacity: .3;
+}
+
+/*th[data-orderable="false"] {
+  width: 60px;
+}
+
+th[data-orderable="false"].wide {
+  width: 90px;
+}
+
+th[data-orderable="false"].wider {
+  width: 12px;
+}*/
+
+.data.table th.id {
+  width: 20px;
+}
+
+.cm-gallery {
+  margin: 0 -10px;
+}
+
+.cm-gallery .cm-gallery-headline {
+  font-weight: bold;
+  margin: 20px 10px 0;
+}
+
+.cm-gallery .cm-gallery-container .cm-photo, .cm-gallery .cm-gallery-container .cm-trigger {
+  width: 140px;
+  height: 90px;
+  border: 1px solid rgb(195, 195, 195);
+  margin: 10px 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.cm-gallery .cm-gallery-container .cm-photo {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: cover;
+  vertical-align: top;
+  position: relative;
+}
+
+.cm-gallery .cm-gallery-container .cm-photo .cm-photo-remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #d00;
+  color: #fff;
+  padding: 3px 9px;
+  cursor: pointer;
+  border-width: 0 0 1px 1px;
+  border-color: rgba( 220, 220, 220, .3 );
+  border-style: solid;
+}
+
+.cm-gallery .cm-gallery-container .cm-trigger {
+  cursor: pointer;
+}
+.cm-gallery .cm-gallery-container .cm-trigger.progress {
+  cursor: not-allowed;
+}
+
+.cm-gallery .cm-gallery-container .cm-trigger .cm-trigger-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY( -50% );
+  font-size: 48px;
+  width: 100%;
+  text-align: center;
+  color: rgb(195, 195, 195);
+}
+
+.cm-gallery .cm-gallery-container .cm-trigger .cm-trigger-content.rotating {
+  top: 12%;
+}
+
+
+
+.cm-gallery .cm-gallery-controls .cm-galler-upload {
+  width: 1px;
+  height: 1px;
+  opacity: 0.01;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+// ROTATING ANIMATION
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 1s linear infinite;
+  -moz-animation: rotating 1s linear infinite;
+  -ms-animation: rotating 1s linear infinite;
+  -o-animation: rotating 1s linear infinite;
+  animation: rotating 1s linear infinite;
+}

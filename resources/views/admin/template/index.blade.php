@@ -97,6 +97,7 @@
 		<script src="{{url('/adminlte')}}/plugins/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
 		<script src="{{url('/adminlte')}}/dist/js/custom.js" type="text/javascript"></script>
 		<script src="{{url('/adminlte')}}/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+		<script src="{{url('/adminlte')}}/dist/js/gallery.js" type="text/javascript"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.0.1/sweetalert.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 		<script src="{{url('/adminlte')}}/dist/js/img.js" type="text/javascript"></script>

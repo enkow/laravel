@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Hash;
-
 class Blog extends AbstractUser
 {
 	use Support\MapRequest;
