@@ -47,9 +47,9 @@ class ProjectController extends BaseController
     }
 
 		if($project->save()) {
-			return redirect()->route('admin.project.edit', $project->id)->withSuccess('Project został dodany!');
+			return redirect()->route('admin.project.edit', $project->id)->withSuccess('Projekt został dodany!');
 		}
-		return redirect()->back()->withInput()->withErrors('Project nie został zapisany! Spróbuj ponownie');
+		return redirect()->back()->withInput()->withErrors('Projekt nie został zapisany! Spróbuj ponownie');
 	}
 
   public function edit(Request $request, Project $project)
@@ -85,9 +85,9 @@ class ProjectController extends BaseController
     }
 
     if ($project->save()) {
-      return redirect()->route('admin.project.index')->withSuccess('Project został zapisany!');
+      return redirect()->route('admin.project.index')->withSuccess('Projekt został zapisany!');
     }
-    return redirect()->back()->withInput()->withErrors('Project nie został zapisany! Spróbuj ponownie');
+    return redirect()->back()->withInput()->withErrors('Projekt nie został zapisany! Spróbuj ponownie');
 
 	}
 
@@ -95,8 +95,8 @@ class ProjectController extends BaseController
 	{
     $project->photos()->delete();
     if ($project->delete()) {
-      return redirect()->back()->withSuccess('Project został usunięty!');
+      return redirect()->back()->withSuccess('Projekt został usunięty!');
     }
-		return redirect()->back()->withInput()->withErrors('Project nie został usunięty! Spróbuj ponownie.');
+		return redirect()->back()->withInput()->withErrors('Projekt nie został usunięty! Spróbuj ponownie.');
 	}
 }

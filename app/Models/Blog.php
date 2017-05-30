@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Blog extends AbstractUser
+class Blog extends Model
 {
 	use Support\MapRequest;
 

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Photo extends AbstractUser
+class Photo extends Model
 {
 	use Support\MapRequest;
 
