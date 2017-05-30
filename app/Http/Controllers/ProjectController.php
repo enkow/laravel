@@ -52,9 +52,18 @@ class ProjectController extends BaseController
 		return redirect()->back()->withInput()->withErrors('Project nie został zapisany! Spróbuj ponownie');
 	}
 
-  public function edit(Project $project)
+  public function edit(Request $request, Project $project)
 	{
-    $photos = $project->photos;
+    $photos = [];
+    $data = $project->photos;
+    foreach ($data as $photo) {
+      $photos[] = [
+        'id' => $photo->id,
+        'name' => $photo->name,
+        'url' => $request->getUriForPath('/img/portfolio/' . $photo->name),
+      ];
+    }
+    $photos = json_encode($photos);
 
 		return $this->view('edit', compact('project', 'photos'));
 	}

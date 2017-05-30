@@ -44,16 +44,17 @@ class AjaxController extends BaseController
 			if (!$file) {
 				return $this->response( [], 400 );
 			}
+			$photo = new Photo();
+
 			$path = public_path('img') . DIRECTORY_SEPARATOR . 'portfolio';
-			$picture = $this->setPhotoName($file);
+			$picture = $photo->setPhotoName($file, $path);
 			$file->move($path, $picture);
 
-			$photo = new Photo();
 			$photo->name = $picture;
 			$photo->project_id = $project->id;
 			$photo->save();
 
-			$url = $request->getUriForPath('/gallery/'.$picture);
+			$url = $request->getUriForPath('/img/portfolio/'.$picture);
 			$response = array(
 					'status' => 'success',
 					'id' => $photo->id,
@@ -61,7 +62,7 @@ class AjaxController extends BaseController
 					'url' => $url
 			);
 
-			return $this->response($response, 200);
+			return response()->json($response, 200);
 	}
 
 	/**
@@ -78,18 +79,18 @@ class AjaxController extends BaseController
 	public function removeGallery(Request $request, Photo $photo)
 	{
 			if (!$photo) {
-				return $this->response( [], 400 );
+				return $this->response([], 400);
 			}
 
 			$path = public_path('img') . DIRECTORY_SEPARATOR . 'portfolio';
 			if (file_exists($path . DIRECTORY_SEPARATOR . $photo->name)) {
-					unlink($path.$photo->getName());
+					unlink($path . DIRECTORY_SEPARATOR . $photo->name);
 			}
 
 			$photo->delete();
 
 			$response = array('status' => 'success');
 
-			return new JsonResponse($response);
+			return response()->json($response, 200);
 	}
 }
