@@ -1,7 +1,7 @@
 @extends('admin.template.page')
 
 @section('title')
-  Nowy post
+  Nowy tag
 @stop
 
 @section('body')

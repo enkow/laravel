@@ -1,7 +1,7 @@
 @extends('admin.template.page')
 
 @section('title')
-	Edycja posta
+	Edycja portfolio
 @stop
 
 @section('body')

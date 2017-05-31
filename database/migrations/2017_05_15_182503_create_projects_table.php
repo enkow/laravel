@@ -18,6 +18,7 @@ class CreateProjectsTable extends Migration
           $table->string('name');
           $table->text('description');
           $table->string('slug');
+          $table->tinyInteger('type');
           $table->string('seo_title')->nullable();
           $table->string('seo_description')->nullable();
           $table->string('seo_keywords')->nullable();
