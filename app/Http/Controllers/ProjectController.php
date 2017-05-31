@@ -95,7 +95,16 @@ class ProjectController extends BaseController
 
   public function delete(Project $project)
 	{
-    $project->photos()->delete();
+    $photos = $project->photos;
+    $path = $path = public_path('img') . DIRECTORY_SEPARATOR . 'portfolio';
+
+    foreach ($photos as $photo) {
+      if (file_exists($path . DIRECTORY_SEPARATOR . $photo->name)) {
+        unlink($path . DIRECTORY_SEPARATOR . $photo->name);
+      }
+      $photo->delete();
+    }
+
     if ($project->delete()) {
       return redirect()->back()->withSuccess('Projekt został usunięty!');
     }
