@@ -13,6 +13,11 @@ class Photo extends Model
     return $this->belongsTo(Project::class, 'project_id', 'id');
   }
 
+	public function category()
+  {
+    return $this->belongsTo(Category::class, 'category_id', 'id');
+  }
+
 	public function setPhotoName($file, $path)
 	{
 		$name = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);

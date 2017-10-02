@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Photo;
 use App\Models\Project;
+use App\Models\Category;
 
 class AjaxController extends BaseController
 {
@@ -41,9 +42,11 @@ class AjaxController extends BaseController
 	public function uploadGallery(Request $request, Project $project)
 	{
 			$file = $request->file('image');
-			if (!$file) {
+			$category = Category::find($request->category);
+			if (!$file || !$category) {
 				return $this->response( [], 400 );
 			}
+
 			$photo = new Photo();
 
 			$path = public_path('img') . DIRECTORY_SEPARATOR . 'portfolio';
@@ -52,6 +55,7 @@ class AjaxController extends BaseController
 
 			$photo->name = $picture;
 			$photo->project_id = $project->id;
+			$photo->category_id = $category->id;
 			$photo->save();
 
 			$url = $request->getUriForPath('/img/portfolio/'.$picture);

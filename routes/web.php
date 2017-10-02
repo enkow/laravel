@@ -29,6 +29,7 @@ Route::group( ['prefix' => 'admin'], function () {
     Route::get('/', ['as' => 'admin', 'uses' => 'AdminController@dashboard']);
     Route::get( '/logout', [ 'as' => 'admin.logout', 'uses' => 'AuthController@logout'] );
     Route::rest('tag', 'TagController', 'admin', ['index', 'create', 'edit', 'delete']);
+    Route::rest('category', 'CategoryController', 'admin', ['index', 'create', 'edit', 'delete']);
     Route::rest('blog', 'BlogController', 'admin', ['index', 'create', 'edit', 'delete']);
     Route::rest('project', 'ProjectController', 'admin', ['index', 'create', 'edit', 'delete']);
     Route::rest('offer', 'OfferController', 'admin', ['index', 'create', 'edit', 'delete']);

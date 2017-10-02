@@ -12,22 +12,24 @@
 		<button type="submit" class="btn btn-success">Zapisz</button>
 
 	{{ Form::close() }}
+	<br>
 
-	<br><hr>
+	@foreach ($categories as $category)
+		<hr>
+		<div class="cm-gallery" id="id{{ $category->id }}">
+	    <div class="cm-gallery-headline">
+	      Zdjęcia ({{ $category->name }})
+	    </div>
 
-	<div class="cm-gallery" id="id">
-    <div class="cm-gallery-headline">
-      Zdjęcia
-    </div>
+	    <div class="cm-gallery-container">
+	      <div class="cm-trigger"> <span class="cm-trigger-content">+</span> </div>
+	    </div>
 
-    <div class="cm-gallery-container">
-      <div class="cm-trigger"> <span class="cm-trigger-content">+</span> </div>
-    </div>
-
-    <div class="cm-gallery-controls">
-      <input type="file" class="cm-galler-upload" multiple="">
-    </div>
-  </div>
+	    <div class="cm-gallery-controls">
+	      <input type="file" class="cm-galler-upload" multiple="">
+	    </div>
+	  </div>
+	@endforeach
 @stop
 
 @section('scripts')
@@ -36,9 +38,12 @@
 			upload: "{{ route('ajax.upload.gallery', $project->id) }}",
 			remove: "{{ route('ajax.remove.gallery', ':id') }}"
 		};
-		var galleryCurrentImages = {!! $photos !!};
+		@foreach ($categories as $category)
+			var galleryId = {{ $category->id }};
+			var galleryCurrentImages = {!! $photos !!}[{{ $category->id }}];
 
-		var gallery = new CMGallery( "#id", galleryEndPoints );
-		gallery.loadExisting( galleryCurrentImages );
+			var gallery = new CMGallery("#id" + galleryId, galleryEndPoints);
+			gallery.loadExisting( galleryCurrentImages );
+		@endforeach
 	</script>
 @stop

@@ -7,6 +7,7 @@ use Illuminate\Http\Response;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use App\Http\Controllers\BaseController;
 use App\Models\Project;
+use App\Models\Category;
 
 class ProjectController extends BaseController
 {
@@ -54,18 +55,22 @@ class ProjectController extends BaseController
 
   public function edit(Request $request, Project $project)
 	{
-    $photos = [];
-    $data = $project->photos;
-    foreach ($data as $photo) {
-      $photos[] = [
-        'id' => $photo->id,
-        'name' => $photo->name,
-        'url' => $request->getUriForPath('/img/portfolio/' . $photo->name),
-      ];
+    $categories = Category::all();
+    foreach ($categories as $category) {
+      $photos[$category->id] = [];
+      $data = $project->photos()->where('category_id', '=', $category->id)->get();
+      foreach ($data as $photo) {
+        $photos[$category->id][] = [
+          'id' => $photo->id,
+          'name' => $photo->name,
+          'url' => $request->getUriForPath('/img/portfolio/' . $photo->name),
+        ];
+      }
     }
+
     $photos = json_encode($photos);
 
-		return $this->view('edit', compact('project', 'photos'));
+		return $this->view('edit', compact('project', 'photos', 'categories'));
 	}
 
 	public function update(Request $request, Project $project)

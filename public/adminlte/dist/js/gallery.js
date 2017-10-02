@@ -40,6 +40,8 @@ function CMGallery( selector, endpoints ) {
 
 	this.inProgress = false;
 
+	this.category = selector.replace(/^\D+/g, '');
+
 	this.bootstrap = function () {
 
 		gallery = this;
@@ -110,6 +112,7 @@ function CMGallery( selector, endpoints ) {
 
 		var formData = new FormData();
 		formData.append("image", file);
+		formData.append("category", this.category);
 
 		this.post( this.endpoints.upload, formData, function ( xhr ) {
 			var data = JSON.parse( xhr.responseText );
@@ -161,7 +164,7 @@ function CMGallery( selector, endpoints ) {
 
 		}, function () {
 
-			swal( 'Błąd!', 'Nie udało się uzunąć zdjęcia!' );
+			swal( 'Błąd!', 'Nie udało się usunąć zdjęcia!' );
 
 		});
 
