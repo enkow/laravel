@@ -18,7 +18,15 @@ class CreateProjectsTable extends Migration
           $table->string('name');
           $table->text('description');
           $table->string('slug');
-          $table->tinyInteger('type');
+          $table->string('seo_title')->nullable();
+          $table->string('seo_description')->nullable();
+          $table->string('seo_keywords')->nullable();
+          $table->timestamps();
+        });
+
+        Schema::create('photo_categories', function (Blueprint $table) {
+          $table->increments('id');
+          $table->string('name');
           $table->string('seo_title')->nullable();
           $table->string('seo_description')->nullable();
           $table->string('seo_keywords')->nullable();
@@ -29,6 +37,7 @@ class CreateProjectsTable extends Migration
           $table->increments('id');
           $table->string('name');
           $table->integer('project_id');
+          $table->integer('category_id');
           $table->timestamps();
         });
     }
@@ -41,6 +50,7 @@ class CreateProjectsTable extends Migration
     public function down()
     {
       Schema::dropIfExists('photos');
+      Schema::dropIfExists('photo_categories');
       Schema::dropIfExists('projects');
     }
 }
