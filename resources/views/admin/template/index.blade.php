@@ -81,10 +81,10 @@
 			<footer class="main-footer">
 				<!-- To the right -->
 				<div class="pull-right hidden-xs">
-					Realizacja <a href="http://clickmaster.pl/">ClickMaster Polska</a>
+					Realizacja <a href="mailto:grzesiek94@gmail.com">Grzesiek Stefański</a>
 				</div>
 				<!-- Default to the left -->
-				<strong>Copyright &copy; {{ date('Y') }} <a href="#">strona.pl</a>.</strong> Wszystkie prawa zastrzeżone.
+				<strong>Copyright &copy; {{ date('Y') }} <a href="http://studioarchemia.pl/" target="_blank">studioarchemia.pl</a>.</strong> Wszystkie prawa zastrzeżone.
 			</footer>
 
 		</div><!-- ./wrapper -->
