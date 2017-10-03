@@ -220,22 +220,41 @@
             <div class="row">
                 <div class="col-md-4">
                   <img src="images/portfolio/thumbnails/1.jpg" class="img-thumbnail border-0">
-                  <h5 style="padding:0;margin:25px 0;font-weight:bold;">Lorem</h5>
-                  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nec turpis in interdum. Nulla placerat semper nunc, non imperdiet eros porta id. In hac habitasse platea dictumst. Mauris ullamcorper felis quis dapibus volutpat. Ut semper molestie magna ac faucibus. Ut nec aliquam justo.</p>
+                  <h5 class="blog-title">Lorem</h5>
+                  <p class="text-justify fs-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nec turpis in interdum. Nulla placerat semper nunc, non imperdiet eros porta id. In hac habitasse platea dictumst. Mauris ullamcorper felis quis dapibus volutpat. Ut semper molestie magna ac faucibus. Ut nec aliquam justo.</p>
+                  <div class="clearfix"></div>
+                  <div class="col-xs-12 mt-4">
+                    <span class="pull-left blog-date">06.12.2017 | Studio Archemia</span>
+                    <a href="" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                  </div>
                 </div>
                 <div class="col-md-4">
                   <img src="images/portfolio/thumbnails/1.jpg" class="img-thumbnail border-0">
-                  <h5 style="padding:0;margin:25px 0;font-weight:bold;">Lorem</h5>
-                  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nec turpis in interdum. Nulla placerat semper nunc, non imperdiet eros porta id. In hac habitasse platea dictumst. Mauris ullamcorper felis quis dapibus volutpat. Ut semper molestie magna ac faucibus. Ut nec aliquam justo.</p>
+                  <h5 class="blog-title">Lorem</h5>
+                  <p class="text-justify fs-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nec turpis in interdum. Nulla placerat semper nunc, non imperdiet eros porta id. In hac habitasse platea dictumst. Mauris ullamcorper felis quis dapibus volutpat. Ut semper molestie magna ac faucibus. Ut nec aliquam justo.</p>
+                  <div class="clearfix"></div>
+                  <div class="col-xs-12 mt-4">
+                    <span class="pull-left blog-date">06.12.2017 | Studio Archemia</span>
+                    <a href="" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                  </div>
                 </div>
                 <div class="col-md-4">
                   <img src="images/portfolio/thumbnails/1.jpg" class="img-thumbnail border-0">
-                  <h5 style="padding:0;margin:25px 0;font-weight:bold;">Lorem</h5>
-                  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nec turpis in interdum. Nulla placerat semper nunc, non imperdiet eros porta id. In hac habitasse platea dictumst. Mauris ullamcorper felis quis dapibus volutpat. Ut semper molestie magna ac faucibus. Ut nec aliquam justo.</p>
+                  <h5 class="blog-title">Lorem</h5>
+                  <p class="text-justify fs-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nec turpis in interdum. Nulla placerat semper nunc, non imperdiet eros porta id. In hac habitasse platea dictumst. Mauris ullamcorper felis quis dapibus volutpat. Ut semper molestie magna ac faucibus. Ut nec aliquam justo.</p>
+                  <div class="clearfix"></div>
+                  <div class="col-xs-12 mt-4">
+                    <span class="pull-left blog-date">06.12.2017 | Studio Archemia</span>
+                    <a href="" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                  </div>
                 </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="container text-center mt-5 mb-3">
+        <a class="btn portfolio-btn btn-xl sr-button" href="">przejdź do bloga</a>
       </div>
     </section>
 
@@ -250,7 +269,7 @@
           <div class="col-lg-4 ml-auto text-center">
             <div class="row">
               <div class="col-xs-6 ml-auto text-right">
-                <img src="img/kontakt.png" style="height:140px;">
+                <img src="img/kontakt.png" class="home-contact">
               </div>
               <div class="col-xs-6 mx-auto text-left">
                 605 402 676
@@ -263,12 +282,12 @@
             </div>
             <div class="row mt-4">
               <div class="col-xs-6 ml-auto text-right">
-                <img src="img/wtyczka.png" style="width:92px;">
+                <img src="img/wtyczka.png" class="home-contact-2">
               </div>
               <div class="col-xs-6 mx-auto text-left">
-                <a href=""><img src="img/facebook.png" style="width:51px;"></a>
-                <a href=""><img src="img/pinterest.png" style="width:51px;"></a>
-                <a href=""><img src="img/instagram.png" style="width:51px;"></a>
+                <a href=""><img src="img/facebook.png" class="home-social"></a>
+                <a href=""><img src="img/pinterest.png" class="home-social"></a>
+                <a href=""><img src="img/instagram.png" class="home-social"></a>
               </div>
             </div>
           </div>
@@ -281,7 +300,7 @@
           </div>
         </div>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.39421473237!2d19.92738245104111!3d50.060178479322445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b0c86da0ea7%3A0x4851f2d203247a97!2sJ%C3%B3zefa+Pi%C5%82sudskiego+17%2C+33-332+Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1506960879043" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.39421473237!2d19.92738245104111!3d50.060178479322445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b0c86da0ea7%3A0x4851f2d203247a97!2sJ%C3%B3zefa+Pi%C5%82sudskiego+17%2C+33-332+Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1506960879043" width="100%" height="600" frameborder="0" allowfullscreen class="border-0"></iframe>
     </section>
 
     <!-- Bootstrap core JavaScript -->

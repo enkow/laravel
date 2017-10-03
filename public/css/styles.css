@@ -108,9 +108,36 @@ img::selection {
   padding: 5px 10px;
 }
 
+.blog-title {
+  padding: 0;
+  margin: 25px 0;
+  font-weight: bold;
+}
+
+.blog-date {
+  color: #ccc;
+  font-size: 12px;
+}
+
 .portfolio-btn:hover {
   color: #fff;
   background: #c3c3c3;
+}
+
+.home-contact {
+  height: 140px;
+}
+
+.home-contact-2 {
+  width:92px;
+}
+
+.home-social {
+  width:51px;
+}
+
+.fs-15 {
+  font-size: 15px;
 }
 
 img::-moz-selection {
