@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::group( ['prefix' => 'admin'], function () {
   Route::get('/login', ['as' => 'admin.login', 'uses' => 'AuthController@login']);
   Route::post('/login', ['as' => 'admin.login.auth', 'uses' => 'AuthController@authorize']);
@@ -41,3 +37,5 @@ Route::group( ['prefix' => 'admin'], function () {
     Route::get('/logs', [ 'as' => 'admin.logs', 'uses' => 'LogController@logs' ]);
   });
 });
+
+Route::get('/', ['as' => 'home', 'uses' => 'WebController@index']);

@@ -7,5 +7,5 @@ Homestead.json
 Homestead.yaml
 .env
 
-/public/img/*
-!/public/img/.gitkeep
+/public/img/blog/*
+/public/img/portfolio/*
