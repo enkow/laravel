@@ -294,9 +294,12 @@
           <div class="col-lg-1 mx-auto text-center">
           </div>
           <div class="col-lg-4 mr-auto text-center">
-            <input type="text" class="form-home" placeholder="imię i nazwisko">
-            <input type="email" class="form-home" placeholder="adres email">
-            <textarea class="form-home" placeholder="email" rows="5"></textarea>
+            <form action="" method="GET">
+              <input type="text" name="name" class="form-home" placeholder="imię i nazwisko" required>
+              <input type="email" name="email" class="form-home" placeholder="adres email" required>
+              <textarea class="form-home" name="message" placeholder="email" rows="5" required></textarea>
+              <button type="submit" class="btn portfolio-btn sent-btn btn-xl sr-button">wyślij</button>
+            </form>
           </div>
         </div>
       </div>

@@ -140,6 +140,10 @@ img::selection {
   background: #c3c3c3;
 }
 
+.sent-btn {
+  padding: 8px 30px !important;
+}
+
 .home-contact {
   height: 140px;
 }
