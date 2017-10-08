@@ -15,4 +15,19 @@ class WebController extends BaseController
   {
     return $this->view('index');
   }
+
+  public function blog()
+  {
+    return $this->view('blog');
+  }
+
+  public function blogView()
+  {
+    return $this->view('blog-view');
+  }
+
+  public function offerView()
+  {
+    return $this->view('offer-view');
+  }
 }

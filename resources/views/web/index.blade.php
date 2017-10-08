@@ -22,7 +22,7 @@
     <link href="{{url('/plugins')}}/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{{url('/css')}}/styles.css" rel="stylesheet">
+    <link href="{{url('/css')}}/styles-sg.css" rel="stylesheet">
 
   </head>
 
@@ -64,7 +64,7 @@
           <hr>
           <p>Laboratorium architektury - projektowanie wnętrz</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> --}}
-          <img src="img/studio-archemia.png" class="home-heading">
+          <img src="/img/studio-archemia.png" class="home-heading">
         </div>
       </div>
     </header>
@@ -74,7 +74,7 @@
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading text-black">O NAS</h2>
-            <img src="img/o-nas.png" class="img-about">
+            <img src="/img/o-nas.png" class="img-about">
             <p class="text-faded text-black">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nec turpis in interdum. Nulla placerat semper nunc, non imperdiet eros porta id. In hac habitasse platea dictumst. Mauris ullamcorper felis quis dapibus volutpat. Ut semper molestie magna ac faucibus. Ut nec aliquam justo. Aliquam at ultrices libero. Sed id quam in metus pellentesque ornare tincidunt eget leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Mauris elementum vestibulum nibh, vitae efficitur sapien venenatis et. Vivamus luctus dolor eu orci ornare iaculis. Mauris eu vulputate lacus. Nam vehicula at velit eget sodales. Vivamus vitae consequat eros, a dictum nisl. Nam tempor tristique quam in maximus. Quisque molestie commodo diam, at pulvinar felis lacinia eget. Aliquam mattis eleifend tortor in efficitur. Donec enim felis, convallis id diam sed, pretium hendrerit tortor. Pellentesque nec nulla vel magna placerat ornare.
             </p>
@@ -95,30 +95,30 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box">
-              <img src="img/ikony/zarowka.png" class="sr-icons"></i>
+              <img src="/img/ikony/zarowka.png" class="sr-icons"></i>
               <p class="service-txt">Projekt koncepcyjny</p>
-              <a href="">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+              <a href="{{ route('offer.view') }}">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box">
-              <img src="img/ikony/pedzel.png" class="sr-icons"></i>
+              <img src="/img/ikony/pedzel.png" class="sr-icons"></i>
               <p class="service-txt">Projekt kompleksowy</p>
-              <a href="">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+              <a href="{{ route('offer.view') }}">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box">
-              <img src="img/ikony/lupa.png" class="sr-icons"></i>
+              <img src="/img/ikony/lupa.png" class="sr-icons"></i>
               <p class="service-txt">Nadzór autorski</p>
-              <a href="">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+              <a href="{{ route('offer.view') }}">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box">
-              <img src="img/ikony/monitor.png" class="sr-icons"></i>
+              <img src="/img/ikony/monitor.png" class="sr-icons"></i>
               <p class="service-txt">Projekt online</p>
-              <a href="">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+              <a href="{{ route('offer.view') }}">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -225,7 +225,7 @@
                   <div class="clearfix"></div>
                   <div class="col-xs-12 mt-4">
                     <span class="pull-left blog-date">06.12.2017 | Studio Archemia</span>
-                    <a href="" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    <a href="{{ route('blog.view') }}" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                   </div>
                 </div>
                 <div class="col-md-4">
@@ -235,7 +235,7 @@
                   <div class="clearfix"></div>
                   <div class="col-xs-12 mt-4">
                     <span class="pull-left blog-date">06.12.2017 | Studio Archemia</span>
-                    <a href="" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    <a href="{{ route('blog.view') }}" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                   </div>
                 </div>
                 <div class="col-md-4">
@@ -245,7 +245,7 @@
                   <div class="clearfix"></div>
                   <div class="col-xs-12 mt-4">
                     <span class="pull-left blog-date">06.12.2017 | Studio Archemia</span>
-                    <a href="" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    <a href="{{ route('blog.view') }}" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                   </div>
                 </div>
             </div>
@@ -254,7 +254,7 @@
       </div>
 
       <div class="container text-center mt-5 mb-3">
-        <a class="btn portfolio-btn btn-xl sr-button" href="">przejdź do bloga</a>
+        <a class="btn portfolio-btn btn-xl sr-button" href="{{ route('blog') }}">przejdź do bloga</a>
       </div>
     </section>
 
@@ -269,7 +269,7 @@
           <div class="col-lg-4 ml-auto text-center">
             <div class="row">
               <div class="col-xs-6 ml-auto text-right">
-                <img src="img/kontakt.png" class="home-contact">
+                <img src="/img/kontakt.png" class="home-contact">
               </div>
               <div class="col-xs-6 mx-auto text-left">
                 605 402 676
@@ -282,12 +282,12 @@
             </div>
             <div class="row mt-4">
               <div class="col-xs-6 ml-auto text-right">
-                <img src="img/wtyczka.png" class="home-contact-2">
+                <img src="/img/wtyczka.png" class="home-contact-2">
               </div>
               <div class="col-xs-6 mx-auto text-left">
-                <a href=""><img src="img/facebook.png" class="home-social"></a>
-                <a href=""><img src="img/pinterest.png" class="home-social"></a>
-                <a href=""><img src="img/instagram.png" class="home-social"></a>
+                <a href=""><img src="/img/facebook.png" class="home-social"></a>
+                <a href=""><img src="/img/pinterest.png" class="home-social"></a>
+                <a href=""><img src="/img/instagram.png" class="home-social"></a>
               </div>
             </div>
           </div>
@@ -317,7 +317,7 @@
     <script src="{{url('/plugins')}}/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="{{url('/js')}}/scripts.min.js"></script>
+    <script src="{{url('/js')}}/scripts-sg.js"></script>
 
   </body>
 
