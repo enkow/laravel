@@ -11,9 +11,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 mx-auto text-center">
-          <a href="" class="btn-tag">wnętrza</a>
-          <a href="" class="btn-tag">trendy</a>
-          <a href="" class="btn-tag">inspiracje</a>
+          <a href="{{ route('tag') }}" class="btn-tag">wnętrza</a>
+          <a href="{{ route('tag') }}" class="btn-tag">trendy</a>
+          <a href="{{ route('tag') }}" class="btn-tag">inspiracje</a>
           <h1 class="blog-title">Lorem ipsum dolor sit amet</h1>
         </div>
 
@@ -41,7 +41,7 @@
             <div class="col-md-5 mr-auto mb-4">
               <div class="blog-img my-4" style="background-image: url('/images/portfolio/thumbnails/1.jpg');"></div>
               <div class="my-3">
-                <a href="" class="btn-tag">inspiracje</a>
+                <a href="{{ route('tag') }}" class="btn-tag">inspiracje</a>
               </div>
               <h5 class="blog-title">Lorem</h5>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisl eros, elementum ac purus sed, mollis semper ante. Mauris leo enim, luctus sit amet est quis, dignissim mollis felis. Quisque et ultricies velit, tincidunt varius elit. In mattis velit a lorem mollis malesuada. Vestibulum vestibulum cursus euismod. Nullam felis arcu, lobortis vitae pellentesque id, suscipit ut ligula. Etiam congue eleifend sem, nec fringilla ipsum hendrerit non. Nullam at hendrerit lacus, a posuere ipsum.
@@ -54,7 +54,7 @@
             <div class="col-md-5 ml-auto mb-4">
               <div class="blog-img my-4" style="background-image: url('/images/portfolio/thumbnails/1.jpg');"></div>
               <div class="my-3">
-                <a href="" class="btn-tag">inspiracje</a>
+                <a href="{{ route('tag') }}" class="btn-tag">inspiracje</a>
               </div>
               <h5 class="blog-title">Lorem</h5>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisl eros, elementum ac purus sed, mollis semper ante. Mauris leo enim, luctus sit amet est quis, dignissim mollis felis. Quisque et ultricies velit, tincidunt varius elit. In mattis velit a lorem mollis malesuada. Vestibulum vestibulum cursus euismod. Nullam felis arcu, lobortis vitae pellentesque id, suscipit ut ligula. Etiam congue eleifend sem, nec fringilla ipsum hendrerit non. Nullam at hendrerit lacus, a posuere ipsum.

@@ -30,4 +30,9 @@ class WebController extends BaseController
   {
     return $this->view('offer-view');
   }
+
+  public function tag()
+  {
+    return $this->view('tag');
+  }
 }

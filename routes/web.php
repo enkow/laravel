@@ -41,4 +41,5 @@ Route::group( ['prefix' => 'admin'], function () {
 Route::get('/', ['as' => 'home', 'uses' => 'WebController@index']);
 Route::get('/blog', ['as' => 'blog', 'uses' => 'WebController@blog']);
 Route::get('/blog/view', ['as' => 'blog.view', 'uses' => 'WebController@blogView']);
+Route::get('/tag', ['as' => 'tag', 'uses' => 'WebController@tag']);
 Route::get('/offer/view', ['as' => 'offer.view', 'uses' => 'WebController@offerView']);

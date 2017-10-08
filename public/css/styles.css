@@ -181,6 +181,24 @@ h1.offer-title {
   margin-top: 70px;
 }
 
+a.tag-link {
+  margin: 0 7px;
+}
+
+a.tag-link.active {
+  color: #b1b2b4;
+  text-decoration: underline;
+}
+
+a.paginate {
+  padding: 2px 7px;
+}
+
+a.paginate.active {
+  color: #b1b2b4;
+  border: 1px solid #b1b2b4;
+}
+
 img::-moz-selection {
   color: white;
   background: transparent;

@@ -7,7 +7,7 @@
 @section('body')
   <header style="background-image: url('../images/offer/{{ rand(1, 4) }}.png');">
     <div style="">
-      <img src="/img/ikony/zarowka-duza.png" style="width:175px;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);">
+      <img src="/img/ikony/duze/zarowka.png" style="width:175px;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);">
     </div>
   </header>
 
