@@ -206,7 +206,7 @@
 
     <div class="call-to-action bg-primary">
       <div class="container text-center">
-        <a class="btn portfolio-btn btn-xl sr-button" href="">zobacz więcej</a>
+        <a class="btn portfolio-btn btn-xl sr-button" href="{{ route('portfolio') }}">zobacz więcej</a>
       </div>
     </div>
 

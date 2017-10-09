@@ -6,19 +6,19 @@
 <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">O nas</a>
+            <a class="nav-link js-scroll-trigger" href="{{ route('home') }}#about">O nas</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Oferta</a>
+            <a class="nav-link js-scroll-trigger" href="{{ route('home') }}#services">Oferta</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            <a class="nav-link js-scroll-trigger" href="{{ route('portfolio') }}">Portfolio</a>
         </li>
         <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{{ route('blog') }}">Blog</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Kontakt</a>
+            <a class="nav-link js-scroll-trigger" href="{{ route('home') }}#contact">Kontakt</a>
         </li>
     </ul>
 </div>

@@ -224,6 +224,48 @@ body {
   background-size: cover;
 }
 
+.separate{
+  position: relative;
+  text-align: center;
+  color: #b1b2b4;
+}
+.separate::before{
+  content: "";
+  width: 45%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #b1b2b4;
+}
+.separate::after{
+  content: "";
+  width: 45%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background: #b1b2b4;
+}
+
+@media (max-width: 992px) {
+  .separate::before{
+    width: 40%;
+  }
+  .separate::after{
+    width: 40%;
+  }
+}
+
+@media (max-width: 475px) {
+  .separate::before{
+    width: 35%;
+  }
+  .separate::after{
+    width: 35%;
+  }
+}
+
 #contact {
   padding-bottom: 0;
 }

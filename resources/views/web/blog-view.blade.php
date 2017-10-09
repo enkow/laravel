@@ -36,7 +36,7 @@
         </div>
 
         <div class="col-md-10 mx-auto mt-75">
-          <hr style="border-width:2px;min-width:auto;max-width:none;">
+          <div class="col-xs-12 separate">WIĘCEJ</div>
           <div class="row">
             <div class="col-md-5 mr-auto mb-4">
               <div class="blog-img my-4" style="background-image: url('/images/portfolio/thumbnails/1.jpg');"></div>
