@@ -43,3 +43,6 @@ Route::get('/blog', ['as' => 'blog', 'uses' => 'WebController@blog']);
 Route::get('/blog/view', ['as' => 'blog.view', 'uses' => 'WebController@blogView']);
 Route::get('/tag', ['as' => 'tag', 'uses' => 'WebController@tag']);
 Route::get('/offer/view', ['as' => 'offer.view', 'uses' => 'WebController@offerView']);
+Route::get('/portfolio', ['as' => 'portfolio', 'uses' => 'WebController@portfolio']);
+Route::get('/portfolio/view', ['as' => 'portfolio.view', 'uses' => 'WebController@portfolioView']);
+Route::get('/category', ['as' => 'category', 'uses' => 'WebController@category']);

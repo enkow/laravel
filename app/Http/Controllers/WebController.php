@@ -35,4 +35,19 @@ class WebController extends BaseController
   {
     return $this->view('tag');
   }
+
+  public function portfolio()
+  {
+    return $this->view('portfolio');
+  }
+
+  public function portfolioView()
+  {
+    return $this->view('portfolio-view');
+  }
+
+  public function category()
+  {
+    return $this->view('category');
+  }
 }
