@@ -30,7 +30,7 @@ class OfferController extends BaseController
     $path = public_path('img') . DIRECTORY_SEPARATOR . 'ikony';
     $data = scandir($path);
     foreach ($data as $icon) {
-      if ($icon != '.' && $icon != '..') {
+      if ($icon != '.' && $icon != '..' && $icon != 'duze') {
         $icons[$icon] = $icon;
       }
     }

@@ -38,6 +38,13 @@ class TagController extends BaseController
 		$tag = new Tag;
 		$tag->mapRequest('*');
 
+    $counter = Tag::where('slug', '=', str_slug($tag->name))->count();
+    if ($counter) {
+      $tag->slug = sprintf('%s-%s', str_slug($tag->name), $counter);
+    } else {
+      $tag->slug = str_slug($tag->name);
+    }
+
 		if($tag->save()) {
 			return redirect()->route('admin.tag.index')->withSuccess('Tag został dodany!');
 		}
@@ -56,6 +63,13 @@ class TagController extends BaseController
     ]);
 
     $tag->mapRequest('*');
+    $counter = Tag::where('id', '!=', $tag->id)->where('slug', '=', str_slug($tag->name))->count();
+    if ($counter) {
+      $tag->slug = sprintf('%s-%s', str_slug($tag->name), $counter);
+    } else {
+      $tag->slug = str_slug($tag->name);
+    }
+
     if ($tag->save()) {
       return redirect()->route('admin.tag.index')->withSuccess('Tag został zapisany!');
     }

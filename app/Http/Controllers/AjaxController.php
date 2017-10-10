@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Photo;
 use App\Models\Project;
 use App\Models\Category;
+use Image;
 
 class AjaxController extends BaseController
 {
@@ -25,13 +26,18 @@ class AjaxController extends BaseController
     $fullname = $name . '.' . $ext;
 		$counter = 1;
 
-		while( file_exists( $path . DIRECTORY_SEPARATOR . $fullname ) ) {
+		while(file_exists($path . DIRECTORY_SEPARATOR . $fullname)) {
 			$fullname = $name . '-' . ( string ) $counter++ . '.' . $ext;
 		}
 
     //dd($upload->getClientOriginalName());
 
-		if( $upload->move( $path, $fullname ) ) {
+		if($upload->move($path, $fullname)) {
+			if ($dir == 'blog') {
+				$img = Image::make($path . DIRECTORY_SEPARATOR . $fullname)
+						->fit(650, 350)
+						->save($path . DIRECTORY_SEPARATOR . 'thumb' . DIRECTORY_SEPARATOR . $fullname);
+			}
 			return response()->json( [ 'name' => $fullname ], 200 );
 		}
 

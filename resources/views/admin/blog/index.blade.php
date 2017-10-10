@@ -24,11 +24,7 @@
             <tr>
                 <td>{{ $post->id }}</td>
                 <td>{{ $post->name }}</td>
-                <td>
-                  @foreach($post->tags as $tag)
-                    {{ $tag->name }},
-                  @endforeach
-                </td>
+                <td>{{ implode(', ', $post->tags()->pluck('name')->toArray()) }}</td>
                 <td><a href="{{ route('admin.blog.edit', $post->id) }}" class="btn btn-warning"><i class="fa fa-pencil-square-o"></i> Edytuj</a></td>
                 <td><a href="" class="btn btn-danger deletable" data-href="{{ route('admin.blog.delete', $post->id) }}"><i class="fa fa-trash"></i> Usuń</a></td>
         @endforeach

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use App\Http\Controllers\BaseController;
+use App\Models\Blog;
+use App\Models\Offer;
 
 class WebController extends BaseController
 {
@@ -13,7 +15,10 @@ class WebController extends BaseController
 
   public function index()
   {
-    return $this->view('index');
+    $offers = Offer::all();
+    $posts = Blog::orderBy('created_at', 'desc')->take(3)->get();
+
+    return $this->view('index', compact('offers', 'posts'));
   }
 
   public function blog()
@@ -21,14 +26,19 @@ class WebController extends BaseController
     return $this->view('blog');
   }
 
-  public function blogView()
+  public function blogView($slug) //done
   {
-    return $this->view('blog-view');
+    $post = Blog::where('slug', '=', $slug)->firstOrFail();
+    $posts = Blog::where('id', '!=', $post->id)->take(2)->inRandomOrder()->get();
+
+    return $this->view('blog-view', compact('post', 'posts'));
   }
 
-  public function offerView()
+  public function offerView($slug) //done
   {
-    return $this->view('offer-view');
+    $offer = Offer::where('slug', '=', $slug)->firstOrFail();
+
+    return $this->view('offer-view', compact('offer'));
   }
 
   public function tag()

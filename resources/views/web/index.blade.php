@@ -76,7 +76,22 @@
             <h2 class="section-heading text-black">O NAS</h2>
             <img src="/img/o-nas.png" class="img-about">
             <p class="text-faded text-black">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nec turpis in interdum. Nulla placerat semper nunc, non imperdiet eros porta id. In hac habitasse platea dictumst. Mauris ullamcorper felis quis dapibus volutpat. Ut semper molestie magna ac faucibus. Ut nec aliquam justo. Aliquam at ultrices libero. Sed id quam in metus pellentesque ornare tincidunt eget leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Mauris elementum vestibulum nibh, vitae efficitur sapien venenatis et. Vivamus luctus dolor eu orci ornare iaculis. Mauris eu vulputate lacus. Nam vehicula at velit eget sodales. Vivamus vitae consequat eros, a dictum nisl. Nam tempor tristique quam in maximus. Quisque molestie commodo diam, at pulvinar felis lacinia eget. Aliquam mattis eleifend tortor in efficitur. Donec enim felis, convallis id diam sed, pretium hendrerit tortor. Pellentesque nec nulla vel magna placerat ornare.
+              KIM JESTEŚMY:<br>
+              Nasza droga rozpoczęła się jeszcze na Wydziale Architektury Politechniki Krakowskiej, kiedy to zrządzenie losu połączyło dwie zupełnie obce sobie osoby pracą nad wspólnym dyplomem.
+              Różne spojrzenia na temat i niezliczone burze mózgów przerodziły się nie tylko w udany dyplom ale przede wszystkim w przyjaźń i chęć kontynuacji wspólnej pracy. Tak właśnie powstało Studio Archemia, związek chemiczny dwóch odmiennych dusz, których wspólne zamiłowanie do projektowania i technicznych łamigłówek idealnie się uzupełniają.
+              <br><br>
+              CO ROBIMY:<br>
+              Nasze <strong>projekty wystroju wnętrz</strong> łączą w sobie ciekawy design, styl i klasę ale przede wszystkim kładziemy nacisk na  ergonomię przestrzeni, dobraną specjalnie do Państwa potrzeb i trybu życia.
+              <strong>Aranżacja wnętrz</strong> jest naszą pasją, wyznajemy zasadę, że najlepsze wnętrza to takie, które nie tylko ładnie wyglądają ale w których dobrze się mieszka.
+              Z przyjemnością podejmiemy się zleceń obejmujących <strong>projektowanie wnętrz</strong> prywatnych i publicznych.
+              <br><br><br>
+
+              ZOBACZ NASZE:<br>
+              - aranżacja łazienki | projekty łazienki<br>
+              - aranżacja kuchni | projekty kuchni<br>
+              - aranżacja łazienki z salonem | projekty kuchni<br>
+              - aranżacja salonu | projekt salonu<br>
+              - aranżacja pokoju dziecka | projekt pokoju dziecka<br>
             </p>
           </div>
         </div>
@@ -93,34 +108,15 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <img src="/img/ikony/zarowka.png" class="sr-icons"></i>
-              <p class="service-txt">Projekt koncepcyjny</p>
-              <a href="{{ route('offer.view') }}">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+          @foreach($offers as $offer)
+            <div class="col-lg-3 col-md-6 text-center">
+              <div class="service-box">
+                <img src="{{ url('img/ikony') }}/{{ $offer->icon }}" class="sr-icons"></i>
+                <p class="service-txt">{{ $offer->name }}</p>
+                <a href="{{ route('offer.view', $offer->slug) }}">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <img src="/img/ikony/pedzel.png" class="sr-icons"></i>
-              <p class="service-txt">Projekt kompleksowy</p>
-              <a href="{{ route('offer.view') }}">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <img src="/img/ikony/lupa.png" class="sr-icons"></i>
-              <p class="service-txt">Nadzór autorski</p>
-              <a href="{{ route('offer.view') }}">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <img src="/img/ikony/monitor.png" class="sr-icons"></i>
-              <p class="service-txt">Projekt online</p>
-              <a href="{{ route('offer.view') }}">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
     </section>
@@ -218,36 +214,18 @@
           </div>
           <div class="col-lg-12 mx-auto">
             <div class="row">
-                <div class="col-md-4">
-                  <img src="images/portfolio/thumbnails/1.jpg" class="img-thumbnail border-0">
-                  <h5 class="blog-title">Lorem</h5>
-                  <p class="text-justify fs-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nec turpis in interdum. Nulla placerat semper nunc, non imperdiet eros porta id. In hac habitasse platea dictumst. Mauris ullamcorper felis quis dapibus volutpat. Ut semper molestie magna ac faucibus. Ut nec aliquam justo.</p>
-                  <div class="clearfix"></div>
-                  <div class="col-xs-12 mt-4">
-                    <span class="pull-left blog-date">06.12.2017 | Studio Archemia</span>
-                    <a href="{{ route('blog.view') }}" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                @foreach($posts as $post)
+                  <div class="col-md-4">
+                    <img src="{{ url('img/blog/thumb') }}/{{ $post->photo }}" class="img-thumbnail border-0">
+                    <h5 class="blog-title">{{ $post->name }}</h5>
+                    <p class="text-justify fs-15">{{ str_limit(strip_tags($post->content), 275, '...') }}</p>
+                    <div class="clearfix"></div>
+                    <div class="col-xs-12 mt-4">
+                      <span class="pull-left blog-date">{{ date('d.m.Y', strtotime($post->created_at)) }} | Studio Archemia</span>
+                      <a href="{{ route('blog.view', $post->slug) }}" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4">
-                  <img src="images/portfolio/thumbnails/1.jpg" class="img-thumbnail border-0">
-                  <h5 class="blog-title">Lorem</h5>
-                  <p class="text-justify fs-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nec turpis in interdum. Nulla placerat semper nunc, non imperdiet eros porta id. In hac habitasse platea dictumst. Mauris ullamcorper felis quis dapibus volutpat. Ut semper molestie magna ac faucibus. Ut nec aliquam justo.</p>
-                  <div class="clearfix"></div>
-                  <div class="col-xs-12 mt-4">
-                    <span class="pull-left blog-date">06.12.2017 | Studio Archemia</span>
-                    <a href="{{ route('blog.view') }}" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <img src="images/portfolio/thumbnails/1.jpg" class="img-thumbnail border-0">
-                  <h5 class="blog-title">Lorem</h5>
-                  <p class="text-justify fs-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod nec turpis in interdum. Nulla placerat semper nunc, non imperdiet eros porta id. In hac habitasse platea dictumst. Mauris ullamcorper felis quis dapibus volutpat. Ut semper molestie magna ac faucibus. Ut nec aliquam justo.</p>
-                  <div class="clearfix"></div>
-                  <div class="col-xs-12 mt-4">
-                    <span class="pull-left blog-date">06.12.2017 | Studio Archemia</span>
-                    <a href="{{ route('blog.view') }}" class="pull-right fs-15">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                  </div>
-                </div>
+                @endforeach
             </div>
           </div>
         </div>

@@ -82,11 +82,10 @@ class BlogController extends BaseController
       $blog->slug = str_slug($blog->name);
     }
 
+    $blog->tags()->detach();
     foreach ($request->tag_list as $tag) {
       $tag = Tag::find($tag);
-      if (!$blog->tags->contains($tag)) {
-        $blog->tags()->attach($tag);
-      }
+      $blog->tags()->attach($tag);
     }
 
     if ($blog->save()) {
