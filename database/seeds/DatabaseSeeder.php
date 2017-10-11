@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     {
       mkdir(public_path('img/blog'), 0755);
       mkdir(public_path('img/blog/thumb'), 0755);
+      mkdir(public_path('img/oferta'), 0755);
       mkdir(public_path('img/portfolio'), 0755);
       mkdir(public_path('img/portfolio/thumb'), 0755);
 

@@ -80,7 +80,19 @@ class CategoryController extends BaseController
 
   public function delete(Category $category)
 	{
-    $category->posts()->detach();
+    $photos = $category->photos;
+    $path = $path = public_path('img') . DIRECTORY_SEPARATOR . 'portfolio';
+
+    foreach ($photos as $photo) {
+      if (file_exists($path . DIRECTORY_SEPARATOR . $photo->name)) {
+        unlink($path . DIRECTORY_SEPARATOR . $photo->name);
+      }
+      if (file_exists($path . DIRECTORY_SEPARATOR . 'thumb' . DIRECTORY_SEPARATOR . $photo->name)) {
+        unlink($path . DIRECTORY_SEPARATOR . 'thumb' . DIRECTORY_SEPARATOR . $photo->name);
+      }
+      $photo->delete();
+    }
+
     if ($category->delete()) {
       return redirect()->back()->withSuccess('Kategoria została usunięta!');
     }

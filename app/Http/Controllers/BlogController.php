@@ -100,6 +100,9 @@ class BlogController extends BaseController
     if (file_exists($path . DIRECTORY_SEPARATOR . $blog->photo)) {
       unlink($path . DIRECTORY_SEPARATOR . $blog->photo);
     }
+    if (file_exists($path . DIRECTORY_SEPARATOR . 'thumb' . DIRECTORY_SEPARATOR . $blog->photo)) {
+      unlink($path . DIRECTORY_SEPARATOR . 'thumb' . DIRECTORY_SEPARATOR . $blog->photo);
+    }
 
     $blog->tags()->detach();
 

@@ -196,7 +196,7 @@
                 <br><br>
                 <a href="mailto:biuro@studioarchemia.pl">biuro@studioarchemia.pl</a>
                 <br><br>
-                ul. Piłsudzkiego 17/3<br>
+                ul. Piłsudskiego 17/3<br>
                 31-111 Kraków
               </div>
             </div>

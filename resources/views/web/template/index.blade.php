@@ -39,7 +39,7 @@
             </span>
             <span style="margin-right: 20px;white-space: nowrap;">
               <i class="fa fa-map-marker" aria-hidden="true" style="margin-right:7px;"></i>
-              ul. Piłsudzkiego 17/3, 31-111 Kraków
+              ul. Piłsudskiego 17/3, 31-111 Kraków
             </span>
           </div>
           <div class="col-md-12 text-center mt-4">

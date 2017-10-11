@@ -101,6 +101,9 @@ class AjaxController extends BaseController
 			if (file_exists($path . DIRECTORY_SEPARATOR . $photo->name)) {
 					unlink($path . DIRECTORY_SEPARATOR . $photo->name);
 			}
+			if (file_exists($path . DIRECTORY_SEPARATOR . 'thumb' . DIRECTORY_SEPARATOR . $photo->name)) {
+					unlink($path . DIRECTORY_SEPARATOR . 'thumb' . DIRECTORY_SEPARATOR . $photo->name);
+			}
 
 			$photo->delete();
 
