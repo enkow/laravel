@@ -10,6 +10,7 @@ use App\Models\Blog;
 use App\Models\Offer;
 use App\Models\Photo;
 use App\Models\Support\Paginator;
+use App\Models\Project;
 use App\Models\Category;
 use App\Models\Tag;
 
@@ -72,7 +73,7 @@ class WebController extends BaseController
     return $this->view('photos', compact('categories', 'photos', 'paginator'));
   }
 
-  public function portfolio($slug, $page = 1) //dokoncz
+  public function portfolio($slug, $page = 1) //done
   {
     $category = Category::where('slug', '=', $slug)->firstOrFail();
     $categories = Category::orderBy('name', 'asc')->get();
@@ -83,8 +84,10 @@ class WebController extends BaseController
     return $this->view('portfolio', compact('category', 'categories', 'photos', 'paginator'));
   }
 
-  public function portfolioView()
+  public function portfolioView($slug)
   {
-    return $this->view('portfolio-view');
+    $project = Project::where('slug', '=', $slug)->firstOrFail();
+
+    return $this->view('portfolio-view', compact('project'));
   }
 }
