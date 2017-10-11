@@ -38,6 +38,7 @@ class AjaxController extends BaseController
 						->fit(650, 350)
 						->save($path . DIRECTORY_SEPARATOR . 'thumb' . DIRECTORY_SEPARATOR . $fullname);
 			}
+
 			return response()->json( [ 'name' => $fullname ], 200 );
 		}
 
@@ -58,6 +59,10 @@ class AjaxController extends BaseController
 			$path = public_path('img') . DIRECTORY_SEPARATOR . 'portfolio';
 			$picture = $photo->setPhotoName($file, $path);
 			$file->move($path, $picture);
+
+			$img = Image::make($path . DIRECTORY_SEPARATOR . $picture)
+					->fit(650, 350)
+					->save($path . DIRECTORY_SEPARATOR . 'thumb' . DIRECTORY_SEPARATOR . $picture);
 
 			$photo->name = $picture;
 			$photo->project_id = $project->id;

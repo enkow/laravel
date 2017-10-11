@@ -39,9 +39,14 @@ Route::group( ['prefix' => 'admin'], function () {
 });
 
 Route::get('/', ['as' => 'home', 'uses' => 'WebController@index']);
-Route::get('/blog/{page?}', ['as' => 'blog', 'uses' => 'WebController@blog']);
+Route::get('/blog', ['as' => 'blog', 'uses' => 'WebController@blog']);
+Route::get('/blog/strona/{page}', ['as' => 'blog.paginate', 'uses' => 'WebController@blog']);
 Route::get('/blog/{slug}', ['as' => 'blog.view', 'uses' => 'WebController@blogView']);
-Route::get('/blog/tag/{slug}/{page?}', ['as' => 'tag', 'uses' => 'WebController@tag']);
+Route::get('/blog/tag/{slug}', ['as' => 'tag', 'uses' => 'WebController@tag']);
+Route::get('/blog/tag/{slug}/{page}', ['as' => 'tag.paginate', 'uses' => 'WebController@tag']);
 Route::get('/oferty/{slug}', ['as' => 'offer.view', 'uses' => 'WebController@offerView']);
-Route::get('/portfolio/{slug?}/{page?}', ['as' => 'portfolio', 'uses' => 'WebController@portfolio']);
-Route::get('/portfolio/view', ['as' => 'portfolio.view', 'uses' => 'WebController@portfolioView']);
+Route::get('/portfolio', ['as' => 'portfolio.all', 'uses' => 'WebController@photos']);
+Route::get('/portfolio/strona/{page}', ['as' => 'portfolio.all.paginate', 'uses' => 'WebController@photos']);
+Route::get('/portfolio/{slug}', ['as' => 'portfolio', 'uses' => 'WebController@portfolio']);
+Route::get('/portfolio/{slug}/strona/{page}', ['as' => 'portfolio.paginate', 'uses' => 'WebController@portfolio']);
+Route::get('/portfolio/podglad/{slug}', ['as' => 'portfolio.view', 'uses' => 'WebController@portfolioView']);
