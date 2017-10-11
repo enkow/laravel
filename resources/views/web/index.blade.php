@@ -124,78 +124,20 @@
     <section class="p-0" id="portfolio">
       <div class="container-fluid">
         <div class="row no-gutter popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="images/portfolio/fullsize/1.jpg">
-              <img class="img-fluid" src="images/portfolio/thumbnails/1.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-name">
-                    projekt wnętrza domu w Wieliczce
+          @for($i = 0; $i < 6; $i++)
+            <div class="col-lg-4 col-sm-6">
+              <a class="portfolio-box" href="{{ url('img') }}/header.png">
+                <img class="img-fluid" src="{{ url('img') }}/header.png">
+                <div class="portfolio-box-caption">
+                  <div class="portfolio-box-caption-content">
+                    <div class="project-name">
+                      projekt wnętrza domu
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="images/portfolio/fullsize/2.jpg">
-              <img class="img-fluid" src="images/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-name">
-                    projekt wnętrza domu w Wieliczce
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="images/portfolio/fullsize/3.jpg">
-              <img class="img-fluid" src="images/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-name">
-                    projekt wnętrza domu w Wieliczce
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="images/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="images/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-name">
-                    projekt wnętrza domu w Wieliczce
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="images/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="images/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-name">
-                    projekt wnętrza domu w Wieliczce
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="images/portfolio/fullsize/6.jpg">
-              <img class="img-fluid" src="images/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-name">
-                    projekt wnętrza domu w Wieliczce
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
+          @endfor
         </div>
       </div>
     </section>

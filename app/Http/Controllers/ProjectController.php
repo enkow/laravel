@@ -27,6 +27,10 @@ class ProjectController extends BaseController
 
   public function create()
 	{
+    if (!Category::orderBy('id', 'asc')->count()) {
+      return redirect()->route('admin.category.create')->withErrors('Najpierw dodaj kategorie zdjęć!');
+    }
+
 		return $this->view('create');
 	}
 
