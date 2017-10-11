@@ -38,6 +38,13 @@ class CategoryController extends BaseController
 		$category = new Category;
 		$category->mapRequest('*');
 
+    $counter = Category::where('slug', '=', str_slug($category->name))->count();
+    if ($counter) {
+      $category->slug = sprintf('%s-%s', str_slug($category->name), $counter);
+    } else {
+      $category->slug = str_slug($category->name);
+    }
+
 		if($category->save()) {
 			return redirect()->route('admin.category.index')->withSuccess('Kategoria została dodana!');
 		}
@@ -56,6 +63,14 @@ class CategoryController extends BaseController
     ]);
 
     $category->mapRequest('*');
+
+    $counter = Category::where('id', '!=', $category->id)->where('slug', '=', str_slug($category->name))->count();
+    if ($counter) {
+      $category->slug = sprintf('%s-%s', str_slug($category->name), $counter);
+    } else {
+      $category->slug = str_slug($category->name);
+    }
+
     if ($category->save()) {
       return redirect()->route('admin.category.index')->withSuccess('Kategoria została zapisana!');
     }

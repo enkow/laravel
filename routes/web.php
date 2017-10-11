@@ -39,10 +39,9 @@ Route::group( ['prefix' => 'admin'], function () {
 });
 
 Route::get('/', ['as' => 'home', 'uses' => 'WebController@index']);
-Route::get('/blog', ['as' => 'blog', 'uses' => 'WebController@blog']);
+Route::get('/blog/{page?}', ['as' => 'blog', 'uses' => 'WebController@blog']);
 Route::get('/blog/{slug}', ['as' => 'blog.view', 'uses' => 'WebController@blogView']);
-Route::get('/blog/tag/{slug}', ['as' => 'tag', 'uses' => 'WebController@tag']);
+Route::get('/blog/tag/{slug}/{page?}', ['as' => 'tag', 'uses' => 'WebController@tag']);
 Route::get('/oferty/{slug}', ['as' => 'offer.view', 'uses' => 'WebController@offerView']);
-Route::get('/portfolio', ['as' => 'portfolio', 'uses' => 'WebController@portfolio']);
+Route::get('/portfolio/{slug?}/{page?}', ['as' => 'portfolio', 'uses' => 'WebController@portfolio']);
 Route::get('/portfolio/view', ['as' => 'portfolio.view', 'uses' => 'WebController@portfolioView']);
-Route::get('/category', ['as' => 'category', 'uses' => 'WebController@category']);

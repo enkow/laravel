@@ -192,6 +192,7 @@ h1.offer-title {
 
 a.tag-link {
   margin: 0 7px;
+  text-transform: uppercase;
 }
 
 a.tag-link.active {

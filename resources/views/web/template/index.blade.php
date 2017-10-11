@@ -29,14 +29,23 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <span style="margin-right: 20px;white-space: nowrap;"><i class="fa fa-mobile" aria-hidden="true" style="margin-right:7px;"></i>605 402 676</span>
-            <span style="margin-right: 20px;white-space: nowrap;"><i class="fa fa-envelope" aria-hidden="true" style="margin-right:7px;"></i>biuro@studioarchemia.pl</span>
-            <span style="margin-right: 20px;white-space: nowrap;"><i class="fa fa-map-marker" aria-hidden="true" style="margin-right:7px;"></i>ul. Piłsudzkiego 17/3, 31-111 Kraków</span>
+            <span style="margin-right: 20px;white-space: nowrap;">
+              <i class="fa fa-mobile" aria-hidden="true" style="margin-right:7px;"></i>
+              <a href="tel:+48605402676">605 402 676</a>
+            </span>
+            <span style="margin-right: 20px;white-space: nowrap;">
+              <i class="fa fa-envelope" aria-hidden="true" style="margin-right:7px;"></i>
+              <a href="mailto:biuro@studioarchemia.pl">biuro@studioarchemia.pl</a>
+            </span>
+            <span style="margin-right: 20px;white-space: nowrap;">
+              <i class="fa fa-map-marker" aria-hidden="true" style="margin-right:7px;"></i>
+              ul. Piłsudzkiego 17/3, 31-111 Kraków
+            </span>
           </div>
           <div class="col-md-12 text-center mt-4">
-            <a href=""><img src="/img/facebook.png" class="home-social"></a>
-            <a href=""><img src="/img/pinterest.png" class="home-social"></a>
-            <a href=""><img src="/img/instagram.png" class="home-social"></a>
+            <a href="https://www.facebook.com/StudioArchemia/" target="_blank"><img src="/img/facebook.png" class="home-social"></a>
+            <a href="https://pl.pinterest.com/studioarchemia/" target="_blank"><img src="/img/pinterest.png" class="home-social"></a>
+            <a href="" target="_blank"><img src="/img/instagram.png" class="home-social"></a>
           </div>
         </div>
       </div>

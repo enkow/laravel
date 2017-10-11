@@ -250,9 +250,9 @@
                 <img src="/img/kontakt.png" class="home-contact">
               </div>
               <div class="col-xs-6 mx-auto text-left">
-                605 402 676
+                <a href="tel:+48605402676">605 402 676</a>
                 <br><br>
-                biuro@studioarchemia.pl
+                <a href="mailto:biuro@studioarchemia.pl">biuro@studioarchemia.pl</a>
                 <br><br>
                 ul. Piłsudzkiego 17/3<br>
                 31-111 Kraków
@@ -263,9 +263,9 @@
                 <img src="/img/wtyczka.png" class="home-contact-2">
               </div>
               <div class="col-xs-6 mx-auto text-left">
-                <a href=""><img src="/img/facebook.png" class="home-social"></a>
-                <a href=""><img src="/img/pinterest.png" class="home-social"></a>
-                <a href=""><img src="/img/instagram.png" class="home-social"></a>
+                <a href="https://www.facebook.com/StudioArchemia/" target="_blank"><img src="/img/facebook.png" class="home-social"></a>
+                <a href="https://pl.pinterest.com/studioarchemia/" target="_blank"><img src="/img/pinterest.png" class="home-social"></a>
+                <a href="" target="_blank"><img src="/img/instagram.png" class="home-social"></a>
               </div>
             </div>
           </div>

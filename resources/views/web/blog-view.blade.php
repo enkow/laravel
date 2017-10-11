@@ -1,8 +1,8 @@
 @extends('web.template.index')
 
-@section('title'){{ 'Archemia' }}@stop
-@section('description'){{ 'Archemia' }}@stop
-@section('keywords'){{ 'Archemia' }}@stop
+@section('title'){{ $post->seo_title }}@stop
+@section('description'){{ $post->seo_description }}@stop
+@section('keywords'){{ $post->seo_keywords }}@stop
 
 @section('body')
   <header style="background-image: url('{{ url('img/blog') }}/{{ $post->photo }}');"></header>

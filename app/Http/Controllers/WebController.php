@@ -8,6 +8,8 @@ use Illuminate\Foundation\Bus\DispatchesCommands;
 use App\Http\Controllers\BaseController;
 use App\Models\Blog;
 use App\Models\Offer;
+use App\Models\Support\Paginator;
+use App\Models\Tag;
 
 class WebController extends BaseController
 {
@@ -21,9 +23,15 @@ class WebController extends BaseController
     return $this->view('index', compact('offers', 'posts'));
   }
 
-  public function blog()
+  public function blog($page = 1) //done
   {
-    return $this->view('blog');
+    $first = Blog::orderBy('created_at', 'desc')->first();
+    $except = $first ? $first->id : 0;
+    $query = Blog::where('id', '!=', $except);
+    $orderBy = ['created_at', 'desc'];
+    list($posts, $paginator) = Paginator::pagination($page, $query, $orderBy, 4);
+
+    return $this->view('blog', compact('first', 'posts', 'paginator'));
   }
 
   public function blogView($slug) //done
@@ -41,12 +49,18 @@ class WebController extends BaseController
     return $this->view('offer-view', compact('offer'));
   }
 
-  public function tag()
+  public function tag($slug, $page = 1) //done
   {
-    return $this->view('tag');
+    $tag = Tag::where('slug', '=', $slug)->firstOrFail();
+    $tags = Tag::orderBy('name', 'asc')->get();
+    $query = $tag->posts();
+    $orderBy = ['created_at', 'desc'];
+    list($posts, $paginator) = Paginator::pagination($page, $query, $orderBy, 6);
+
+    return $this->view('tag', compact('tag', 'tags', 'posts', 'paginator'));
   }
 
-  public function portfolio()
+  public function portfolio($slug = null, $page = 1) //dokoncz
   {
     return $this->view('portfolio');
   }
@@ -54,10 +68,5 @@ class WebController extends BaseController
   public function portfolioView()
   {
     return $this->view('portfolio-view');
-  }
-
-  public function category()
-  {
-    return $this->view('category');
   }
 }
