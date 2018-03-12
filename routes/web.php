@@ -33,6 +33,7 @@ Route::group( ['prefix' => 'admin'], function () {
     Route::post('/ajax/upload/{dir}', ['as' => 'ajax.upload', 'uses' => 'AjaxController@upload']);
     Route::post('/ajax/upload/gallery/{project}', ['as' => 'ajax.upload.gallery', 'uses' => 'AjaxController@uploadGallery']);
     Route::get('/ajax/remove/{photo}', ['as' => 'ajax.remove.gallery', 'uses' => 'AjaxController@removeGallery']);
+    Route::get('/ajax/set-main/{photo}', ['as' => 'ajax.main.gallery', 'uses' => 'AjaxController@setMainPhoto']);
 
     Route::get('/logs', [ 'as' => 'admin.logs', 'uses' => 'LogController@logs' ]);
   });

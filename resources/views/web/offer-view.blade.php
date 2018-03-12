@@ -20,10 +20,11 @@
 
         <div class="col-md-9 mx-auto">
           {!! $offer->description !!}
-          <div class="col-xs-12 mt-75 text-center">
-            PRZYKŁAD<br><br>
-            <a class="btn portfolio-btn btn-xl sr-button" href="">zobacz</a>
-          </div>
+          @if($pdf)
+            <div class="col-xs-12 mt-75 text-center">
+              <a class="btn portfolio-btn btn-xl sr-button" href="{{ url('pdf') }}/{{ str_slug($offer->name) }}.pdf" target="_blank">ZOBACZ PRZYKŁAD</a>
+            </div>
+          @endif
         </div>
       </div>
     </div>

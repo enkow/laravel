@@ -42,6 +42,7 @@ class OfferController extends BaseController
 	{
     $this->validate($request, [
       'name' => 'required',
+      'lead' => 'required',
       'description' => 'required',
       'photo' => 'required',
       'icon' => 'required',
@@ -81,6 +82,7 @@ class OfferController extends BaseController
 	{
     $this->validate($request, [
       'name' => 'required',
+      'lead' => 'required',
       'description' => 'required',
       'photo' => 'required',
       'icon' => 'required',

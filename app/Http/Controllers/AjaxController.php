@@ -111,4 +111,24 @@ class AjaxController extends BaseController
 
 			return response()->json($response, 200);
 	}
+
+	public function setMainPhoto(Request $request, Photo $photo)
+	{
+			if (!$photo) {
+				return $this->response([], 400);
+			}
+
+			$project = $photo->project;
+			$main = $project->photos()->where('main', '=', 1)->first();
+			if ($main) {
+				$main->main = 0;
+				$main->save();
+			}
+
+			$photo->main = 1;
+			$photo->save();
+			$response = array('status' => 'success');
+
+			return response()->json($response, 200);
+	}
 }

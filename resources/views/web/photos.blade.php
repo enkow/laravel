@@ -17,14 +17,18 @@
     </div>
     <div class="container-fluid">
       <div class="row no-gutter">
-        @foreach($photos as $photo)
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="{{ route('portfolio.view', $photo->project->slug) }}">
-              <img class="img-fluid" src="{{ url('img/portfolio/thumb') }}/{{ $photo->name }}">
+        @foreach($projects as $project)
+          <div class="col-lg-4 co l-sm-6">
+            <a class="portfolio-box" href="{{ route('portfolio.view', $project->slug) }}">
+              @if($project->photos->count())
+                <img class="img-fluid" src="{{ url('img/portfolio/thumb') }}/{{ $project->photos()->where('main', '=', 1)->first() ? $project->photos()->where('main', '=', 1)->first()->name : $project->photos->first()->name }}">
+              @else
+                <img class="img-fluid" src="{{ url('img/brak-zdjecia.png') }}">
+              @endif
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-name">
-                    {{ $photo->project->name }} ({{ $photo->category->name }})
+                    {{ $project->name }}
                   </div>
                 </div>
               </div>

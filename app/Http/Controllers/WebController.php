@@ -48,8 +48,12 @@ class WebController extends BaseController
   public function offerView($slug) //done
   {
     $offer = Offer::where('slug', '=', $slug)->firstOrFail();
+    $pdf = sprintf('%s/%s.pdf', public_path('pdf'), str_slug($offer->name));
+    if (!file_exists($pdf)) {
+      $pdf = null;
+    }
 
-    return $this->view('offer-view', compact('offer'));
+    return $this->view('offer-view', compact('offer', 'pdf'));
   }
 
   public function tag($slug, $page = 1) //done
@@ -66,11 +70,11 @@ class WebController extends BaseController
   public function photos($page = 1) //done
   {
     $categories = Category::orderBy('name', 'asc')->get();
-    $query = Photo::where('id', '>', 0);
-    $orderBy = ['id', 'desc'];
-    list($photos, $paginator) = Paginator::pagination($page, $query, $orderBy, 16);
+    $query = Project::where('id', '>', 0);
+    $orderBy = ['order', 'asc'];
+    list($projects, $paginator) = Paginator::pagination($page, $query, $orderBy, 16);
 
-    return $this->view('photos', compact('categories', 'photos', 'paginator'));
+    return $this->view('photos', compact('categories', 'projects', 'paginator'));
   }
 
   public function portfolio($slug, $page = 1) //done
@@ -79,7 +83,7 @@ class WebController extends BaseController
     $categories = Category::orderBy('name', 'asc')->get();
     $query = $category->photos();
     $orderBy = ['id', 'desc'];
-    list($photos, $paginator) = Paginator::pagination($page, $query, $orderBy, 16);
+    list($photos, $paginator) = Paginator::pagination($page, $query, $orderBy, 15);
 
     return $this->view('portfolio', compact('category', 'categories', 'photos', 'paginator'));
   }

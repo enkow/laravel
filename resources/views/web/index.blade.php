@@ -72,15 +72,12 @@
     <section class="bg-white" id="about">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
+          <div class="col-lg-10 mx-auto text-center">
             <h2 class="section-heading text-black">O NAS</h2>
             <img src="/img/o-nas.png" class="img-about">
-            <p class="text-faded text-black">
-              KIM JESTEŚMY:<br>
+            <p class="text-faded text-black text-justify">
               Nasza droga rozpoczęła się jeszcze na Wydziale Architektury Politechniki Krakowskiej, kiedy to zrządzenie losu połączyło dwie zupełnie obce sobie osoby pracą nad wspólnym dyplomem.
               Różne spojrzenia na temat i niezliczone burze mózgów przerodziły się nie tylko w udany dyplom ale przede wszystkim w przyjaźń i chęć kontynuacji wspólnej pracy. Tak właśnie powstało Studio Archemia, związek chemiczny dwóch odmiennych dusz, których wspólne zamiłowanie do projektowania i technicznych łamigłówek idealnie się uzupełniają.
-              <br><br>
-              CO ROBIMY:<br>
               Nasze <strong>projekty wystroju wnętrz</strong> łączą w sobie ciekawy design, styl i klasę ale przede wszystkim kładziemy nacisk na  ergonomię przestrzeni, dobraną specjalnie do Państwa potrzeb i trybu życia.
               <strong>Aranżacja wnętrz</strong> jest naszą pasją, wyznajemy zasadę, że najlepsze wnętrza to takie, które nie tylko ładnie wyglądają ale w których dobrze się mieszka.
               Z przyjemnością podejmiemy się zleceń obejmujących <strong>projektowanie wnętrz</strong> prywatnych i publicznych.
@@ -113,6 +110,7 @@
               <div class="service-box">
                 <img src="{{ url('img/ikony') }}/{{ $offer->icon }}" class="sr-icons"></i>
                 <p class="service-txt">{{ $offer->name }}</p>
+                <p class="text-center offer-lead">{{ $offer->lead }}</p>
                 <a href="{{ route('offer.view', $offer->slug) }}">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
@@ -126,8 +124,8 @@
         <div class="row no-gutter popup-gallery">
           @for($i = 0; $i < 6; $i++)
             <div class="col-lg-4 col-sm-6">
-              <a class="portfolio-box" href="{{ url('img') }}/header.png">
-                <img class="img-fluid" src="{{ url('img') }}/header.png">
+              <a class="portfolio-box" href="{{ url('img') }}/foto.jpg">
+                <img class="img-fluid" src="{{ url('img') }}/foto.jpg">
                 <div class="portfolio-box-caption">
                   <div class="portfolio-box-caption-content">
                     <div class="project-name">
@@ -207,7 +205,7 @@
               <div class="col-xs-6 mx-auto text-left">
                 <a href="https://www.facebook.com/StudioArchemia/" target="_blank"><img src="/img/facebook.png" class="home-social"></a>
                 <a href="https://pl.pinterest.com/studioarchemia/" target="_blank"><img src="/img/pinterest.png" class="home-social"></a>
-                <a href="" target="_blank"><img src="/img/instagram.png" class="home-social"></a>
+                <a href="https://www.instagram.com/studioarchemia/" target="_blank"><img src="/img/instagram.png" class="home-social"></a>
               </div>
             </div>
           </div>

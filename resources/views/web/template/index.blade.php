@@ -15,6 +15,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,900" rel="stylesheet">
     <link href="{{url('/plugins')}}/magnific-popup/magnific-popup.css" rel="stylesheet">
     <link href="{{url('/css')}}/styles.css" rel="stylesheet">
+    <style>
+      @media screen and (max-width: 767px) {
+        .center-xs {
+          text-align: center;
+        }
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -28,24 +35,35 @@
     <section id="footer" class="bg-primary">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 text-center">
-            <span style="margin-right: 20px;white-space: nowrap;">
-              <i class="fa fa-mobile" aria-hidden="true" style="margin-right:7px;"></i>
+          <div class="col-lg-4 col-md-6 center-xs" style="font-size:12px;margin-bottom:30px;">
+            ZOBACZ NASZE:<br>
+            - aranżacja łazienki | projekty łazienki<br>
+            - aranżacja kuchni | projekty kuchni<br>
+            - aranżacja łazienki z salonem | projekty kuchni<br>
+            - aranżacja salonu | projekt salonu<br>
+            - aranżacja pokoju dziecka | projekt pokoju dziecka
+          </div>
+          <div class="col-lg-4 col-md-6 center-xs" style="margin-bottom:30px;">
+            <span style="margin-right: 20px;white-space: nowrap;line-height:35px;">
+              <i class="fa fa-mobile" aria-hidden="true" style="margin-right:7px;margin-left:3px;"></i>
               <a href="tel:+48605402676">605 402 676</a>
             </span>
-            <span style="margin-right: 20px;white-space: nowrap;">
+            <span style="margin-right: 20px;white-space: nowrap;line-height:35px;">
               <i class="fa fa-envelope" aria-hidden="true" style="margin-right:7px;"></i>
               <a href="mailto:biuro@studioarchemia.pl">biuro@studioarchemia.pl</a>
             </span>
-            <span style="margin-right: 20px;white-space: nowrap;">
-              <i class="fa fa-map-marker" aria-hidden="true" style="margin-right:7px;"></i>
+            <span style="margin-right: 20px;white-space: nowrap;line-height:35px;">
+              <i class="fa fa-map-marker" aria-hidden="true" style="margin-right:7px;margin-left:3px;"></i>
               ul. Piłsudskiego 17/3, 31-111 Kraków
             </span>
           </div>
-          <div class="col-md-12 text-center mt-4">
+          <div class="col-lg-4 col-md-12 text-center">
+            <div class="col-xs-12" style="line-height:50px;">
+              Obserwuj nas!
+            </div>
             <a href="https://www.facebook.com/StudioArchemia/" target="_blank"><img src="/img/facebook.png" class="home-social"></a>
             <a href="https://pl.pinterest.com/studioarchemia/" target="_blank"><img src="/img/pinterest.png" class="home-social"></a>
-            <a href="" target="_blank"><img src="/img/instagram.png" class="home-social"></a>
+            <a href="https://www.instagram.com/studioarchemia/" target="_blank"><img src="/img/instagram.png" class="home-social"></a>
           </div>
         </div>
       </div>

@@ -87,7 +87,7 @@ function CMGallery( selector, endpoints ) {
 	this.loadExisting = function ( collection ) {
 
 		collection.forEach( function ( image ) {
-			gallery.pushImage( image.id, image.url );
+			gallery.pushImage( image.id, image.url, image.main );
 		});
 
 	}
@@ -117,7 +117,7 @@ function CMGallery( selector, endpoints ) {
 		this.post( this.endpoints.upload, formData, function ( xhr ) {
 			var data = JSON.parse( xhr.responseText );
 
-			gallery.pushImage( data.id, data.url );
+			gallery.pushImage( data.id, data.url, data.main );
 
 		}, function ( xhr ) {
 			console.log( 'error'  );
@@ -126,14 +126,30 @@ function CMGallery( selector, endpoints ) {
 
 	}
 
-	this.pushImage = function ( id, url ) {
+	this.pushImage = function ( id, url, main ) {
 
 		var image = document.createElement('div');
 
 		var remove = document.createElement( 'span' );
 
+		var setMain = document.createElement( 'span' );
+
+		if (main) {
+			image.classList.add( 'cm-main-photo' );
+		} else {
+			setMain.classList.add( 'cm-photo-main' );
+			var icon = document.createElement( 'i' );
+			icon.classList.add( 'fa-picture-o' );
+			icon.classList.add( 'fa' );
+			setMain.appendChild(icon);
+		}
+
 		remove.classList.add( 'cm-photo-remove' );
-		remove.innerText = 'x';
+		var icon = document.createElement( 'i' );
+		icon.classList.add( 'fa-times' );
+		icon.classList.add( 'fa' );
+		remove.appendChild(icon);
+
 		remove.addEventListener( 'click', function ( e ) {
 
 			var element = this.parentNode;
@@ -144,7 +160,18 @@ function CMGallery( selector, endpoints ) {
 
 		});
 
+		setMain.addEventListener( 'click', function ( e ) {
+			var newMain = this.parentNode;
+			var currentMain = document.getElementsByClassName('cm-main-photo')[0];
+
+			sconfirm( null, function () {
+				gallery.setImageMain( newMain, currentMain, setMain );
+			});
+
+		});
+
 		image.appendChild( remove );
+		image.appendChild( setMain );
 
 		image.classList.add( 'cm-photo' );
 		image.dataset.imageId = id;
@@ -165,6 +192,31 @@ function CMGallery( selector, endpoints ) {
 		}, function () {
 
 			swal( 'Błąd!', 'Nie udało się usunąć zdjęcia!' );
+
+		});
+
+	}
+
+	this.setImageMain = function ( newMain, currentMain, setMain ) {
+
+		var id = newMain.dataset.imageId;
+		var url = this.endpoints.main.replace( ':id', id );
+
+		this.get( url, function () {
+
+			if (currentMain != undefined) {
+				currentMain.classList.remove('cm-main-photo');
+				currentMain.appendChild( setMain );
+			} else {
+				var icon = newMain.getElementsByClassName('cm-photo-main');
+				newMain.removeChild(icon[0]);
+			}
+
+			newMain.classList.add('cm-main-photo');
+
+		}, function () {
+
+			swal( 'Błąd!', 'Nie udało się ustawić głównego zdjęcia! Spróbuj ponownie' );
 
 		});
 

@@ -6,7 +6,7 @@
 
 @section('body')
   @if($project->photos->count())
-    <header style="background-image: url('{{ url('img/portfolio') }}/{{ $project->photos[0]->name }}');"></header>
+    <header style="background-image: url('{{ url('img/portfolio') }}/{{ $project->photos()->where('main', '=', 1)->first() ? $project->photos()->where('main', '=', 1)->first()->name : $project->photos->first()->name }}');"></header>
   @endif
 
   <section class="bg-white">

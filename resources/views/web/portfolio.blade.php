@@ -16,10 +16,10 @@
       @endforeach
     </div>
     <div class="container-fluid">
-      <div class="row no-gutter">
+      <div class="row no-gutter popup-gallery">
         @foreach($photos as $photo)
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="{{ route('portfolio.view', $photo->project->slug) }}">
+            <a class="portfolio-box" href="{{ url('img/portfolio') }}/{{ $photo->name }}">
               <img class="img-fluid" src="{{ url('img/portfolio/thumb') }}/{{ $photo->name }}">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">

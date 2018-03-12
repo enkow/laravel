@@ -32,7 +32,8 @@ class CategoryController extends BaseController
 	public function store(Request $request)
 	{
     $this->validate($request, [
-        'name' => 'required'
+        'name' => 'required',
+        'order' => 'numeric'
     ]);
 
 		$category = new Category;
@@ -59,7 +60,8 @@ class CategoryController extends BaseController
 	public function update(Request $request, Category $category)
 	{
     $this->validate($request, [
-        'name' => 'required'
+        'name' => 'required',
+        'order' => 'numeric'
     ]);
 
     $category->mapRequest('*');

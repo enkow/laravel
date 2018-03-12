@@ -6,6 +6,24 @@
 
 @section('body')
 
+	<style>
+		.cm-photo-main {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #307C4C;
+			color: #fff;
+			padding: 3px 9px;
+			cursor: pointer;
+			border-width: 0 0 1px 1px;
+			border-color: rgba( 220, 220, 220, .3 );
+			border-style: solid;
+		}
+		.cm-main-photo {
+			border: 10px solid #000 !important;
+		}
+	</style>
+
 	{{ Form::model( $project, [ 'route' => [ 'admin.project.update', $project->id ] ] ) }}
 
 		@include( "admin.project.form" )
@@ -36,7 +54,8 @@
 	<script>
 		var galleryEndPoints = {
 			upload: "{{ route('ajax.upload.gallery', $project->id) }}",
-			remove: "{{ route('ajax.remove.gallery', ':id') }}"
+			remove: "{{ route('ajax.remove.gallery', ':id') }}",
+			main: "{{ route('ajax.main.gallery', ':id') }}",
 		};
 		@foreach ($categories as $category)
 			var galleryId = {{ $category->id }};

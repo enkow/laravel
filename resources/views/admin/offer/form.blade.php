@@ -13,6 +13,10 @@
   </div>
 
   <div class="col-sm-12">
+		{!! Form::field('Krótki opis', 'lead') !!}
+	</div>
+
+  <div class="col-sm-12">
     {!! Form::textfield('Opis', 'description', [ 'wysiwyg' => 'full' ]) !!}
   </div>
 

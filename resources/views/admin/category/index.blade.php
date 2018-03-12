@@ -14,6 +14,7 @@
         <tr>
             <th class="id">#</th>
             <th>Tytuł</th>
+            <th>Kolejność</th>
             <th data-orderable="false"></th>
             <th data-orderable="false"></th>
         </tr>
@@ -23,6 +24,7 @@
             <tr>
                 <td>{{ $category->id }}</td>
                 <td>{{ $category->name }}</td>
+                <td>{{ $category->order }}</td>
                 <td><a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-warning"><i class="fa fa-pencil-square-o"></i> Edytuj</a></td>
                 <td><a href="" class="btn btn-danger deletable" data-href="{{ route('admin.category.delete', $category->id) }}"><i class="fa fa-trash"></i> Usuń</a></td>
         @endforeach

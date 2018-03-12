@@ -39,6 +39,7 @@ class ProjectController extends BaseController
     $this->validate($request, [
       'name' => 'required',
       'description' => 'required',
+      'order' => 'numeric'
     ]);
 
 		$project = new Project;
@@ -68,6 +69,7 @@ class ProjectController extends BaseController
           'id' => $photo->id,
           'name' => $photo->name,
           'url' => $request->getUriForPath('/img/portfolio/' . $photo->name),
+          'main' => $photo->main,
         ];
       }
     }
@@ -82,6 +84,7 @@ class ProjectController extends BaseController
     $this->validate($request, [
       'name' => 'required',
       'description' => 'required',
+      'order' => 'numeric'
     ]);
 
     $project->mapRequest('*');
