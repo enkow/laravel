@@ -69,7 +69,7 @@ class WebController extends BaseController
 
   public function photos($page = 1) //done
   {
-    $categories = Category::orderBy('name', 'asc')->get();
+    $categories = Category::orderBy('order', 'asc')->get();
     $query = Project::where('id', '>', 0);
     $orderBy = ['order', 'asc'];
     list($projects, $paginator) = Paginator::pagination($page, $query, $orderBy, 16);
@@ -80,7 +80,7 @@ class WebController extends BaseController
   public function portfolio($slug, $page = 1) //done
   {
     $category = Category::where('slug', '=', $slug)->firstOrFail();
-    $categories = Category::orderBy('name', 'asc')->get();
+    $categories = Category::orderBy('order', 'asc')->get();
     $query = $category->photos();
     $orderBy = ['id', 'desc'];
     list($photos, $paginator) = Paginator::pagination($page, $query, $orderBy, 15);

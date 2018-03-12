@@ -65,6 +65,7 @@
           <p>Laboratorium architektury - projektowanie wnętrz</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> --}}
           <img src="/img/studio-archemia.png" class="home-heading">
+          <p class="subtitle">Laboratorium architektury | projektowanie wnętrz</p>
         </div>
       </div>
     </header>
@@ -75,20 +76,14 @@
           <div class="col-lg-10 mx-auto text-center">
             <h2 class="section-heading text-black">O NAS</h2>
             <img src="/img/o-nas.png" class="img-about">
-            <p class="text-faded text-black text-justify">
+            <p class="text-faded text-black text-center">
               Nasza droga rozpoczęła się jeszcze na Wydziale Architektury Politechniki Krakowskiej, kiedy to zrządzenie losu połączyło dwie zupełnie obce sobie osoby pracą nad wspólnym dyplomem.
               Różne spojrzenia na temat i niezliczone burze mózgów przerodziły się nie tylko w udany dyplom ale przede wszystkim w przyjaźń i chęć kontynuacji wspólnej pracy. Tak właśnie powstało Studio Archemia, związek chemiczny dwóch odmiennych dusz, których wspólne zamiłowanie do projektowania i technicznych łamigłówek idealnie się uzupełniają.
+              <br><br>
               Nasze <strong>projekty wystroju wnętrz</strong> łączą w sobie ciekawy design, styl i klasę ale przede wszystkim kładziemy nacisk na  ergonomię przestrzeni, dobraną specjalnie do Państwa potrzeb i trybu życia.
               <strong>Aranżacja wnętrz</strong> jest naszą pasją, wyznajemy zasadę, że najlepsze wnętrza to takie, które nie tylko ładnie wyglądają ale w których dobrze się mieszka.
               Z przyjemnością podejmiemy się zleceń obejmujących <strong>projektowanie wnętrz</strong> prywatnych i publicznych.
-              <br><br><br>
-
-              ZOBACZ NASZE:<br>
-              - aranżacja łazienki | projekty łazienki<br>
-              - aranżacja kuchni | projekty kuchni<br>
-              - aranżacja łazienki z salonem | projekty kuchni<br>
-              - aranżacja salonu | projekt salonu<br>
-              - aranżacja pokoju dziecka | projekt pokoju dziecka<br>
+              <br><br>
             </p>
           </div>
         </div>

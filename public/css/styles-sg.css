@@ -516,3 +516,26 @@ fieldset[disabled] .btn-primary:hover {
   font-size: 14px;
   padding: 25px 0;
 }
+
+.subtitle {
+  font-size: 35px !important;
+  color: #fff !important;
+}
+
+@media all and (max-width: 1065px) {
+  .subtitle {
+    font-size: 25px !important;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .subtitle {
+    font-size: 18px !important;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .subtitle {
+    font-size: 10px !important;
+  }
+}

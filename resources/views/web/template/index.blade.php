@@ -37,11 +37,11 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 center-xs" style="font-size:12px;margin-bottom:30px;">
             ZOBACZ NASZE:<br>
-            - aranżacja łazienki | projekty łazienki<br>
-            - aranżacja kuchni | projekty kuchni<br>
-            - aranżacja łazienki z salonem | projekty kuchni<br>
-            - aranżacja salonu | projekt salonu<br>
-            - aranżacja pokoju dziecka | projekt pokoju dziecka
+            <a href="{{ route('portfolio', 'kuchnie') }}">- aranżacja kuchni | projekty kuchni</a><br>
+            <a href="{{ route('portfolio', 'salony') }}">- aranżacja salonu | projekty salonu</a><br>
+            <a href="{{ route('portfolio', 'sypialnie') }}">- aranżacja sypialni | projekty sypialni</a><br>
+            <a href="{{ route('portfolio', 'lazienki') }}">- aranżacja łazienki | projekty łazienki</a><br>
+            <a href="{{ route('portfolio', 'pokoje-dzieciece') }}">- aranżacja pokoju dziecka | projekty pokoju dziecka</a><br>
           </div>
           <div class="col-lg-4 col-md-6 center-xs" style="margin-bottom:30px;">
             <span style="margin-right: 20px;white-space: nowrap;line-height:35px;">

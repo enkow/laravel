@@ -29,6 +29,9 @@
           </div>
         @endforeach
       </div>
+      <div class="col-xs-12 mt-5">
+        <a href="{{ route('portfolio.all') }}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> WSTECZ</a>
+      </div>
     </div>
   </section>
 @stop
