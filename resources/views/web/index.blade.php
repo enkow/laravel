@@ -103,7 +103,7 @@
           @foreach($offers as $offer)
             <div class="col-lg-3 col-md-6 text-center">
               <div class="service-box">
-                <img src="{{ url('img/ikony') }}/{{ $offer->icon }}" class="sr-icons"></i>
+                <a href="{{ route('offer.view', $offer->slug) }}"><img src="{{ url('img/ikony') }}/{{ $offer->icon }}" class="sr-icons"></i></a>
                 <p class="service-txt">{{ $offer->name }}</p>
                 <p class="text-center offer-lead">{{ $offer->lead }}</p>
                 <a href="{{ route('offer.view', $offer->slug) }}">zobacz <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
