@@ -33,7 +33,7 @@ class CategoryController extends BaseController
 	{
     $this->validate($request, [
         'name' => 'required',
-        'order' => 'numeric'
+        'order' => 'required|numeric'
     ]);
 
 		$category = new Category;
@@ -61,7 +61,7 @@ class CategoryController extends BaseController
 	{
     $this->validate($request, [
         'name' => 'required',
-        'order' => 'numeric'
+        'order' => 'required|numeric'
     ]);
 
     $category->mapRequest('*');

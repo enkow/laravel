@@ -22,8 +22,9 @@ class WebController extends BaseController
   {
     $offers = Offer::all();
     $posts = Blog::orderBy('created_at', 'desc')->take(3)->get();
+    $projects = Project::where('main', '=', 1)->orderBy('order', 'asc')->take(6)->get();
 
-    return $this->view('index', compact('offers', 'posts'));
+    return $this->view('index', compact('offers', 'posts', 'projects'));
   }
 
   public function blog($page = 1) //done

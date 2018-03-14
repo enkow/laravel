@@ -23,6 +23,11 @@
 
     <!-- Custom styles for this template -->
     <link href="{{url('/css')}}/styles-sg.css" rel="stylesheet">
+    <style>
+      .img-fluid {
+        height: fit-content;
+      }
+    </style>
 
   </head>
 
@@ -116,21 +121,25 @@
 
     <section class="p-0" id="portfolio">
       <div class="container-fluid">
-        <div class="row no-gutter popup-gallery">
-          @for($i = 0; $i < 6; $i++)
+        <div class="row no-gutter">
+          @foreach($projects as $project)
             <div class="col-lg-4 col-sm-6">
-              <a class="portfolio-box" href="{{ url('img') }}/foto.jpg">
-                <img class="img-fluid" src="{{ url('img') }}/foto.jpg">
+              <a class="portfolio-box" href="{{ route('portfolio.view', $project->slug) }}">
+                @if($project->photos->count())
+                  <img class="img-fluid" src="{{ url('img/portfolio/thumb') }}/{{ $project->photos()->where('main', '=', 1)->first() ? $project->photos()->where('main', '=', 1)->first()->name : $project->photos->first()->name }}">
+                @else
+                  <img class="img-fluid" src="{{ url('img/brak-zdjecia.png') }}">
+                @endif
                 <div class="portfolio-box-caption">
                   <div class="portfolio-box-caption-content">
                     <div class="project-name">
-                      projekt wnętrza domu
+                      {{ $project->name }}
                     </div>
                   </div>
                 </div>
               </a>
             </div>
-          @endfor
+          @endforeach
         </div>
       </div>
     </section>

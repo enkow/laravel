@@ -39,7 +39,8 @@ class ProjectController extends BaseController
     $this->validate($request, [
       'name' => 'required',
       'description' => 'required',
-      'order' => 'numeric'
+      'order' => 'numeric',
+      'main' => 'boolean'
     ]);
 
 		$project = new Project;
@@ -84,7 +85,8 @@ class ProjectController extends BaseController
     $this->validate($request, [
       'name' => 'required',
       'description' => 'required',
-      'order' => 'numeric'
+      'order' => 'numeric',
+      'main' => 'boolean'
     ]);
 
     $project->mapRequest('*');
