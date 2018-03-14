@@ -210,7 +210,7 @@
             <form action="" method="GET">
               <input type="text" name="name" class="form-home" placeholder="imię i nazwisko" required>
               <input type="email" name="email" class="form-home" placeholder="adres email" required>
-              <textarea class="form-home" name="message" placeholder="email" rows="5" required></textarea>
+              <textarea class="form-home" name="message" placeholder="treść" rows="5" required></textarea>
               <button type="submit" class="btn portfolio-btn sent-btn btn-xl sr-button">wyślij</button>
             </form>
           </div>

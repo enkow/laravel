@@ -200,6 +200,16 @@ a.tag-link.active {
   text-decoration: underline;
 }
 
+@media all and (max-width: 768px) {
+  a.tag-link {
+    margin: 0 7px !important;
+  }
+}
+
+.img-thumbnail {
+  min-height: 280px;
+}
+
 a.paginate {
   padding: 2px 7px;
 }

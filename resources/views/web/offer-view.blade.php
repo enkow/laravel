@@ -26,7 +26,7 @@
             </div>
           @endif
           <div class="col-xs-12 mt-5">
-            <a href="{{ route('home') }}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> WSTECZ</a>
+            <a href="{{ route('home', '#services') }}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> WSTECZ</a>
           </div>
         </div>
       </div>
