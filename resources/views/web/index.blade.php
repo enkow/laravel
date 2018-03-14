@@ -23,11 +23,6 @@
 
     <!-- Custom styles for this template -->
     <link href="{{url('/css')}}/styles-sg.css" rel="stylesheet">
-    <style>
-      .img-fluid {
-        height: fit-content;
-      }
-    </style>
 
   </head>
 

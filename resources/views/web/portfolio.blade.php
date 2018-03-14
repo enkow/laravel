@@ -5,11 +5,6 @@
 @section('keywords'){{ 'Archemia' }}@stop
 
 @section('body')
-  <style>
-    .img-fluid {
-      height: fit-content;
-    }
-  </style>
   <section class="bg-white p-0 mb-5">
     <div class="col-md-10 mx-auto text-center">
         <h1 class="offer-title">PORTFOLIO</h1>

@@ -61,7 +61,7 @@ class AjaxController extends BaseController
 			$file->move($path, $picture);
 
 			$img = Image::make($path . DIRECTORY_SEPARATOR . $picture)
-					->fit(650, 350)
+					->fit(650, 433)
 					->save($path . DIRECTORY_SEPARATOR . 'thumb' . DIRECTORY_SEPARATOR . $picture);
 
 			$photo->name = $picture;
