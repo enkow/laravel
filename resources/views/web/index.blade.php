@@ -77,13 +77,12 @@
             <h2 class="section-heading text-black">O NAS</h2>
             <img src="/img/o-nas.png" class="img-about">
             <p class="text-faded text-black text-center">
-              Nasza droga rozpoczęła się jeszcze na Wydziale Architektury Politechniki Krakowskiej, kiedy to zrządzenie losu połączyło dwie zupełnie obce sobie osoby pracą nad wspólnym dyplomem.
-              Różne spojrzenia na temat i niezliczone burze mózgów przerodziły się nie tylko w udany dyplom ale przede wszystkim w przyjaźń i chęć kontynuacji wspólnej pracy. Tak właśnie powstało Studio Archemia, związek chemiczny dwóch odmiennych dusz, których wspólne zamiłowanie do projektowania i technicznych łamigłówek idealnie się uzupełniają.
-              <br><br>
-              Nasze <strong>projekty wystroju wnętrz</strong> łączą w sobie ciekawy design, styl i klasę ale przede wszystkim kładziemy nacisk na  ergonomię przestrzeni, dobraną specjalnie do Państwa potrzeb i trybu życia.
-              <strong>Aranżacja wnętrz</strong> jest naszą pasją, wyznajemy zasadę, że najlepsze wnętrza to takie, które nie tylko ładnie wyglądają ale w których dobrze się mieszka.
-              Z przyjemnością podejmiemy się zleceń obejmujących <strong>projektowanie wnętrz</strong> prywatnych i publicznych.
-              <br><br>
+              Z wykształcenia jesteśmy architektami i grafikami. Ukończyłyśmy Wydział Architektury i Urbanistyki na Politechnice Krakowskiej oraz Grafikę Komputerową na Akademii Górniczo-Hutniczej w Krakowie. Od ponad dziesięciu lat tworzymy energiczny duet, który świetnie się uzupełnia.<br><br>
+              Nasze <strong>projekty wystroju wnętrz</strong> charakteryzuje ciekawy design, styl i klasa. Kładziemy nacisk na ergonomię przestrzeni, tworząc unikalne wnętrza dostosowane do indywidualnych potrzeb i trybu życia klienta. <strong>Aranżacja wnętrz</strong> jest naszą pasją, dlatego stale śledzimy najnowsze trendy pojawiające się na rynku z zakresu nowoczesnych materiałów i technologii. To daje gwarancję, że zaprojektowane przez nas wnętrze będzie nietuzinkowe a inżynierskie wykształcenie dodatkowo pozwoli nam precyzyjnie dopracować każdy techniczny detal.<br><br>
+              Specjalizujemy się we wnętrzach nowoczesnych, lubimy minimalizm, styl skandynawski i loftowy. Kierujemy się zasadą, że najlepsze wnętrza to takie, które nie tylko pięknie wyglądają  ale w których wygodnie się mieszka.<br><br>
+              Współpracujemy z gronem wyspecjalizowanych fachowców.<br><br>
+              Z przyjemnością podejmiemy się zleceń obejmujących <strong>projektowanie wnętrz</strong> prywatnych i publicznych.<br><br>
+              Serdecznie zapraszamy do współpracy!<br><br>
             </p>
           </div>
         </div>
