@@ -65,7 +65,7 @@
           <p>Laboratorium architektury - projektowanie wnętrz</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> --}}
           <img src="/img/studio-archemia.png" class="home-heading">
-          <p class="subtitle">Laboratorium architektury | projektowanie wnętrz</p>
+          <p class="subtitle">laboratorium architektury | projektowanie wnętrz</p>
         </div>
       </div>
     </header>
