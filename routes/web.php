@@ -51,3 +51,4 @@ Route::get('/portfolio/strona/{page}', ['as' => 'portfolio.all.paginate', 'uses'
 Route::get('/portfolio/{slug}', ['as' => 'portfolio', 'uses' => 'WebController@portfolio']);
 Route::get('/portfolio/{slug}/strona/{page}', ['as' => 'portfolio.paginate', 'uses' => 'WebController@portfolio']);
 Route::get('/portfolio/podglad/{slug}', ['as' => 'portfolio.view', 'uses' => 'WebController@portfolioView']);
+Route::post('/kontakt', ['as' => 'contact', 'uses' => 'WebController@contact']);

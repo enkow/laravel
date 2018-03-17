@@ -179,6 +179,18 @@
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading">KONTAKT</h2>
+            @if( session('success') )
+            	<div class="alert alert-success col-xs-12" style="height:50px;">
+            		<p> {{ session('success') }} </p>
+            	</div>
+            @endif
+            @if(isset($errors))
+            	@foreach($errors->all() as $error)
+            		<div class="alert alert-danger col-xs-12" style="height:50px;">
+            			<p> {{ $error }} </p>
+            		</div>
+            	@endforeach
+            @endif
           </div>
         </div>
         <div class="row">
@@ -210,7 +222,8 @@
           <div class="col-lg-1 mx-auto text-center">
           </div>
           <div class="col-lg-4 mr-auto text-center">
-            <form action="" method="GET">
+            <form action="{{ route('contact') }}" method="POST">
+              {{ csrf_field() }}
               <input type="text" name="name" class="form-home" placeholder="imię i nazwisko" required>
               <input type="email" name="email" class="form-home" placeholder="adres email" required>
               <textarea class="form-home" name="message" placeholder="treść" rows="5" required></textarea>

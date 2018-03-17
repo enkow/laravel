@@ -33,7 +33,7 @@ class WebController extends BaseController
     $except = $first ? $first->id : 0;
     $query = Blog::where('id', '!=', $except);
     $orderBy = ['created_at', 'desc'];
-    list($posts, $paginator) = Paginator::pagination($page, $query, $orderBy, 1);
+    list($posts, $paginator) = Paginator::pagination($page, $query, $orderBy, 10);
 
     return $this->view('blog', compact('first', 'posts', 'paginator'));
   }
@@ -94,5 +94,22 @@ class WebController extends BaseController
     $project = Project::where('slug', '=', $slug)->firstOrFail();
 
     return $this->view('portfolio-view', compact('project'));
+  }
+
+  public function contact(Request $request)
+  {
+    if (!$request->name || !$request->email || !$request->message) {
+      return redirect()->route('home', '#contact')->withErrors('Wypełnij formularz poprawnie!');
+    }
+
+    try {
+      $sent = app('mailer')->send('mail.contact', ['name' => $request->name, 'msg' => $request->message, 'email' => $request->email], function ($mailer) {
+        $mailer->to('biuro@studioarchemia.pl')->subject('Formularz kontaktowy');
+      });
+    } catch (\Exception $e) {
+      return redirect()->route('home', '#contact')->withErrors('Coś poszło nie tak, spróbuj pownownie za kilka minut');
+    }
+
+    return redirect()->route('home', '#contact')->withSuccess('Wiadomośc została wysłana');
   }
 }
