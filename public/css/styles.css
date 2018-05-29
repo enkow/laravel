@@ -394,11 +394,12 @@ body {
 .btn-tag {
   color: #b1b2b4;
   border: 2px solid #b1b2b4;
-  padding: 6px 30px;
+  padding: 4px 10px;
   margin-right: 10px;
   transition: all .6s ease .2s;
   display: inline-block;
   margin-bottom: 7px;
+  font-size: 12px;
 }
 .btn-tag:hover {
   text-decoration: none;

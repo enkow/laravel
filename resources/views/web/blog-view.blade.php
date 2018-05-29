@@ -21,8 +21,8 @@
           {!! $post->content !!}
           <div class="col-xs-12 mt-4">
             <span class="pull-left blog-date">{{ date('d.m.Y', strtotime($post->created_at)) }} | Studio Archemia</span>
-            <a href="" class="pull-right fs-12 ml-3">Udostępnij <i class="fa fa-facebook-square fs-12" aria-hidden="true"></i></a>
-            <a href="" class="pull-right fs-12">Skomentuj <i class="fa fa-comment fs-12" aria-hidden="true"></i></a>
+            {{-- <a href="" class="pull-right fs-12 ml-3">Udostępnij <i class="fa fa-facebook-square fs-12" aria-hidden="true"></i></a>
+            <a href="" class="pull-right fs-12">Skomentuj <i class="fa fa-comment fs-12" aria-hidden="true"></i></a> --}}
           </div>
         </div>
 
