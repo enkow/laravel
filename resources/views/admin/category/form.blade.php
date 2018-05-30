@@ -8,6 +8,10 @@
     {!! Form::field('Kolejność', 'order') !!}
   </div>
 
+  <div class="col-sm-12">
+    {!! Form::textfield('Opis', 'description', [ 'wysiwyg' => 'full' ]) !!}
+  </div>
+
   {!! Form::seo() !!}
 
 </div>

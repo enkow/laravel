@@ -63,7 +63,7 @@ class WebController extends BaseController
     $tags = Tag::orderBy('name', 'asc')->get();
     $query = $tag->posts();
     $orderBy = ['created_at', 'desc'];
-    list($posts, $paginator) = Paginator::pagination($page, $query, $orderBy, 1);
+    list($posts, $paginator) = Paginator::pagination($page, $query, $orderBy, 3);
 
     return $this->view('tag', compact('tag', 'tags', 'posts', 'paginator'));
   }
