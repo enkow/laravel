@@ -14,7 +14,7 @@
     <div class="container">
       <div class="row">
         @foreach($posts as $post)
-          <div class="col-md-5 mx-auto mb-4">
+          <div class="col-md-4 mx-auto mb-4">
             <div class="blog-img my-4" style="background-image: url('{{ url('img/blog/thumb') }}/{{ $post->photo }}');"></div>
             <div class="my-3">
               @foreach($post->tags as $item)

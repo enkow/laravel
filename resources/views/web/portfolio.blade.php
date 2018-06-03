@@ -48,6 +48,10 @@
       @endif
     </div>
   @endif
+
+  <div class="col-md-8 mx-auto my-5">
+    {!! $category->description !!}
+  </div>
 @stop
 
 @section('scripts')
