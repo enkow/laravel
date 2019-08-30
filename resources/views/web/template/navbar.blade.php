@@ -6,6 +6,9 @@
 <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="{{ route('blog.view', 'cennik-projektowanie-wnetrz') }}">Cennik</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{{ route('home') }}#about">O nas</a>
         </li>
         <li class="nav-item">
