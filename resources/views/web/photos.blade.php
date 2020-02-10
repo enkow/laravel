@@ -1,8 +1,8 @@
 @extends('web.template.index')
 
-@section('title'){{ 'Archemia' }}@stop
-@section('description'){{ 'Archemia' }}@stop
-@section('keywords'){{ 'Archemia' }}@stop
+@section('title'){{ 'Portfolio' }}@stop
+@section('description'){{ 'Projekty mieszkań, domów, wnętrz użyteczności publicznej - Poznaj nas! Studio ARCHEMIA' }}@stop
+@section('keywords'){{ '' }}@stop
 
 @section('body')
   <section class="bg-white p-0">

@@ -7,7 +7,7 @@
     <meta name="keywords" content="@yield('keywords')">
     <meta name="author" content="Grzegorz Stefański">
 
-    <title>@yield('title')</title>
+    <title>@yield('title') - Studio ARCHEMIA Kraków, Kielce</title>
 
     <link href="{{url('/plugins')}}/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="{{url('/plugins')}}/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -22,6 +22,7 @@
         }
       }
     </style>
+    @yield('styles')
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">

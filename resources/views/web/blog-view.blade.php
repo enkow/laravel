@@ -4,6 +4,17 @@
 @section('description'){{ $post->seo_description }}@stop
 @section('keywords'){{ $post->seo_keywords }}@stop
 
+  @section('styles')
+    <style>
+      header {
+        background-size: contain;
+        padding-top: 39.75%;
+        background-repeat: no-repeat;
+        min-height: 0;
+      }
+    </style>
+  @endsection
+
 @section('body')
   <header style="background-image: url('{{ url('img/blog') }}/{{ $post->photo }}');"></header>
 

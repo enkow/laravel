@@ -1,8 +1,8 @@
 @extends('web.template.index')
 
-@section('title'){{ 'Archemia' }}@stop
-@section('description'){{ 'Archemia' }}@stop
-@section('keywords'){{ 'Archemia' }}@stop
+@section('title'){{ $category->seo_title }}@stop
+@section('description'){{ $category->seo_description }}@stop
+@section('keywords'){{ $category->seo_keywords }}@stop
 
 @section('body')
   <section class="bg-white p-0 mb-5">

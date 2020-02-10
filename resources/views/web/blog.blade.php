@@ -1,8 +1,8 @@
 @extends('web.template.index')
 
-@section('title'){{ 'Archemia' }}@stop
-@section('description'){{ 'Archemia' }}@stop
-@section('keywords'){{ 'Archemia' }}@stop
+@section('title'){{ 'Blog' }}@stop
+@section('description'){{ 'Dzielimy się wiedzą z zakresu aranżacji i projektowania wnętrz - Poznaj nas! Na blogu znajdziesz wiele przydatnych artykułów, które pomogą Ci zgłębić temat projektowania i aranżacji wnętrz.' }}@stop
+@section('keywords')@stop
 
 @section('body')
   @if($first)

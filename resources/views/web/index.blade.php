@@ -5,10 +5,10 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="Realizujemy projekty i aranżacje wnętrz obejmujących projektowanie wnętrz prywatnych i publicznych. Specjalizujemy się we wnętrzach nowoczesnych, lubimy minimalizm, styl skandynawski i loftowy. Nasze projekty wystroju wnętrz charakteryzuje ciekawy design, styl i klasa.">
     <meta name="author" content="Grzegorz Stefański">
 
-    <title>Archemia</title>
+    <title>Studio ARCHEMIA: aranżacja i projektowanie wnętrz - Kraków, Kielce</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{url('/plugins')}}/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
