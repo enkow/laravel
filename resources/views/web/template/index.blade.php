@@ -59,7 +59,7 @@
           <div class="col-lg-4 col-md-6 center-xs" style="margin-bottom:30px;">
             <span style="margin-right: 20px;white-space: nowrap;line-height:35px;">
               <i class="fa fa-mobile" aria-hidden="true" style="margin-right:7px;margin-left:3px;"></i>
-              <a href="tel:+48605402676">605 402 676</a>
+              <a href="tel:+48795522019">795 522 019</a>
             </span>
             <span style="margin-right: 20px;white-space: nowrap;line-height:35px;">
               <i class="fa fa-envelope" aria-hidden="true" style="margin-right:7px;"></i>

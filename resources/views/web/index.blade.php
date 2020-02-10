@@ -214,7 +214,7 @@
                 <img src="/img/kontakt.png" class="home-contact">
               </div>
               <div class="col-xs-6 mx-auto text-left">
-                <a href="tel:+48605402676">605 402 676</a>
+                <a href="tel:+48795522019">795 522 019</a>
                 <br><br>
                 <a href="mailto:biuro@studioarchemia.pl">biuro@studioarchemia.pl</a>
                 <br><br>
