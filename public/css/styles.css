@@ -235,13 +235,17 @@ body {
 }
 
 .blog-img {
-  width: 100%;
-  min-height: 150px;
+  /* width: 100%; */
+  /* min-height: 200px; */
   background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-size: contain;
+  padding-top: 39.75%;
+  background-repeat: no-repeat;
+  min-height: 0;
 }
 
 .separate{

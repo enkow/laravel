@@ -35,7 +35,7 @@ class AjaxController extends BaseController
 		if($upload->move($path, $fullname)) {
 			if ($dir == 'blog') {
 				$img = Image::make($path . DIRECTORY_SEPARATOR . $fullname)
-						->fit(650, 350)
+						->fit(750, 300)
 						->save($path . DIRECTORY_SEPARATOR . 'thumb' . DIRECTORY_SEPARATOR . $fullname);
 			}
 
