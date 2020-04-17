@@ -4,17 +4,24 @@
 @section('description'){{ 'Dzielimy się wiedzą z zakresu aranżacji i projektowania wnętrz - Poznaj nas! Na blogu znajdziesz wiele przydatnych artykułów, które pomogą Ci zgłębić temat projektowania i aranżacji wnętrz.' }}@stop
 @section('keywords')@stop
 
+@section('styles')
+  <style>
+    header {
+      background-size: contain;
+      padding-top: 39.75%;
+      background-repeat: no-repeat;
+      min-height: 0;
+    }
+  </style>
+@endsection
+
+
 @section('body')
   @if($first)
     <header style="background-image: url('{{ url('img/blog') }}/{{ $first->photo }}');">
-      <div class="header-content">
+      <div class="header-content" style="position: absolute;bottom: -25px;">
         <div class="header-content-inner">
-          {{ implode(' | ', $first->tags()->pluck('name')->toArray()) }}
-          <h1>{{ $first->name }}</h1>
-          {{ date('d.m.Y', strtotime($first->created_at)) }} | Archemia
-          <div class="col-xs-12 mt-70">
             <a href="{{ route('blog.view', $first->slug) }}" class="btn-read-more">czytaj więcej <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-          </div>
         </div>
       </div>
     </header>
