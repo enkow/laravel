@@ -47,9 +47,14 @@ Route::get('/blog/{slug}', ['as' => 'blog.view', 'uses' => 'WebController@blogVi
 Route::get('/blog/tag/{slug}', ['as' => 'tag', 'uses' => 'WebController@tag']);
 Route::get('/blog/tag/{slug}/{page}', ['as' => 'tag.paginate', 'uses' => 'WebController@tag']);
 Route::get('/oferty/{slug}', ['as' => 'offer.view', 'uses' => 'WebController@offerView']);
-Route::get('/portfolio', ['as' => 'portfolio.all', 'uses' => 'WebController@photos']);
-Route::get('/portfolio/strona/{page}', ['as' => 'portfolio.all.paginate', 'uses' => 'WebController@photos']);
+Route::get('/portfolio', ['as' => 'portfolio.all', 'uses' => 'WebController@photosProjects']);
+Route::get('/portfolio/strona/{page}', ['as' => 'portfolio.all.paginate', 'uses' => 'WebController@photosProjects']);
 Route::get('/portfolio/{slug}', ['as' => 'portfolio', 'uses' => 'WebController@portfolio']);
 Route::get('/portfolio/{slug}/strona/{page}', ['as' => 'portfolio.paginate', 'uses' => 'WebController@portfolio']);
 Route::get('/portfolio/podglad/{slug}', ['as' => 'portfolio.view', 'uses' => 'WebController@portfolioView']);
+
+Route::get('/realizacje', ['as' => 'realization.all', 'uses' => 'WebController@photosRealizations']);
+Route::get('/realizacje/strona/{page}', ['as' => 'realization.all.paginate', 'uses' => 'WebController@photosRealizations']);
+Route::get('/realizacje/podglad/{slug}', ['as' => 'realization.view', 'uses' => 'WebController@portfolioView']); // ta sama metoda dla realizacji
+
 Route::post('/kontakt', ['as' => 'contact', 'uses' => 'WebController@contact']);

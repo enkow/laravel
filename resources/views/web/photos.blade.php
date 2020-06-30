@@ -10,7 +10,8 @@
         <h1 class="offer-title">PORTFOLIO</h1>
     </div>
     <div class="col-xs-12 mx-auto text-center my-5">
-      <a href="{{ route('portfolio.all') }}" class="tag-link mr-5 active">WSZYSTKO</a>
+      <a href="{{ route('portfolio.all') }}" class="tag-link mr-5 {{ request()->route()->getName() == 'portfolio.all' ? 'active' : '' }}">PROJEKTY</a>
+      <a href="{{ route('realization.all') }}" class="tag-link mr-5 {{ request()->route()->getName() == 'realization.all' ? 'active' : '' }}">REALIZACJE</a>
       @foreach($categories as $category)
         <a href="{{ route('portfolio', $category->slug) }}" class="tag-link mr-5">{{ $category->name }}</a>
       @endforeach
@@ -19,7 +20,8 @@
       <div class="row no-gutter">
         @foreach($projects as $project)
           <div class="col-lg-4 co l-sm-6">
-            <a class="portfolio-box" href="{{ route('portfolio.view', $project->slug) }}">
+            @php($route = $project->type ? 'realization.view' : 'portfolio.view')
+            <a class="portfolio-box" href="{{ route($route, $project->slug) }}">
               @if($project->photos->count())
                 <img class="img-fluid" src="{{ url('img/portfolio/thumb') }}/{{ $project->photos()->where('main', '=', 1)->first() ? $project->photos()->where('main', '=', 1)->first()->name : $project->photos->first()->name }}">
               @else
@@ -41,15 +43,16 @@
   </section>
 
   @if($paginator['pagesCount'] > 1)
+    @php($route = $project->type ? 'realization.all.paginate' : 'portfolio.all.paginate')
     <div class="col-xs-12 mx-auto text-center my-5">
       @if($paginator['page'] > 1)
-        <a href="{{ route('portfolio.all.paginate', $paginator['page'] - 1) }}" class="paginate"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Poprzednia</a>
+        <a href="{{ route($route, $paginator['page'] - 1) }}" class="paginate"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Poprzednia</a>
       @endif
       @for($i = 1; $i <= $paginator['pagesCount']; $i++)
-        <a href="{{ route('portfolio.all.paginate', $i) }}" class="paginate @if($i == $paginator['page']){{ 'active' }}@endif">{{ $i }}</a>
+        <a href="{{ route($route, $i) }}" class="paginate @if($i == $paginator['page']){{ 'active' }}@endif">{{ $i }}</a>
       @endfor
       @if($paginator['page'] != $paginator['pagesCount'])
-        <a href="{{ route('portfolio.all.paginate', $paginator['page'] + 1) }}" class="paginate">Następna <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+        <a href="{{ route($route, $paginator['page'] + 1) }}" class="paginate">Następna <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
       @endif
     </div>
   @endif

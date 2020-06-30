@@ -10,7 +10,8 @@
         <h1 class="offer-title">PORTFOLIO</h1>
     </div>
     <div class="col-xs-12 mx-auto text-center my-5">
-      <a href="{{ route('portfolio.all') }}" class="tag-link mr-5">WSZYSTKO</a>
+      <a href="{{ route('portfolio.all') }}" class="tag-link mr-5">PROJEKTY</a>
+      <a href="{{ route('realization.all') }}" class="tag-link mr-5">REALIZACJE</a>
       @foreach($categories as $item)
         <a href="{{ route('portfolio', $item->slug) }}" class="tag-link mr-5 @if($item->id == $category->id){{ 'active' }}@endif">{{ $item->name }}</a>
       @endforeach

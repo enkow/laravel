@@ -22,9 +22,21 @@ class WebController extends BaseController
   {
     $offers = Offer::all();
     $posts = Blog::orderBy('created_at', 'desc')->take(3)->get();
-    $projects = Project::where('main', '=', 1)->orderBy('order', 'asc')->take(6)->get();
+    $projects = Project::where('main', 1)->where('type', Project::PROJECT)->orderBy('order', 'asc')->take(3)->get();
+    $realizations = Project::where('main', 1)->where('type', Project::REALIZATION)->orderBy('order', 'asc')->take(3)->get();
 
-    return $this->view('index', compact('offers', 'posts', 'projects'));
+    $portfolio = collect([]);
+    for ($i = 0; $i < 3; $i++) {
+      if (isset($projects[$i])) {
+        $portfolio->push($projects[$i]);
+      }
+
+      if (isset($realizations[$i])) {
+        $portfolio->push($realizations[$i]);
+      }
+    }
+
+    return $this->view('index', compact('offers', 'posts', 'portfolio'));
   }
 
   public function blog($page = 1) //done
@@ -68,10 +80,20 @@ class WebController extends BaseController
     return $this->view('tag', compact('tag', 'tags', 'posts', 'paginator'));
   }
 
-  public function photos($page = 1) //done
+  public function photosProjects($page = 1) //done
   {
     $categories = Category::orderBy('order', 'asc')->get();
-    $query = Project::where('id', '>', 0);
+    $query = Project::where('type', Project::PROJECT);
+    $orderBy = ['order', 'asc'];
+    list($projects, $paginator) = Paginator::pagination($page, $query, $orderBy, 16);
+
+    return $this->view('photos', compact('categories', 'projects', 'paginator'));
+  }
+
+  public function photosRealizations($page = 1) //done
+  {
+    $categories = Category::orderBy('order', 'asc')->get();
+    $query = Project::where('type', Project::REALIZATION);
     $orderBy = ['order', 'asc'];
     list($projects, $paginator) = Paginator::pagination($page, $query, $orderBy, 16);
 

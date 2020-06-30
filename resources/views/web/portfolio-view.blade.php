@@ -30,7 +30,8 @@
         @endforeach
       </div>
       <div class="col-xs-12 mt-5">
-        <a href="{{ route('portfolio.all') }}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> WSTECZ</a>
+        @php($route = $project->type ? 'realization.all' : 'portfolio.all')
+        <a href="{{ route($route) }}"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> WSTECZ</a>
       </div>
     </div>
   </section>

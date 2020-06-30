@@ -130,9 +130,10 @@
     <section class="p-0" id="portfolio">
       <div class="container-fluid">
         <div class="row no-gutter">
-          @foreach($projects as $project)
+          @foreach($portfolio as $project)
             <div class="col-lg-4 col-sm-6">
-              <a class="portfolio-box" href="{{ route('portfolio.view', $project->slug) }}">
+              @php($route = $project->type ? 'realization.view' : 'portfolio.view')
+              <a class="portfolio-box" href="{{ route($route, $project->slug) }}">
                 @if($project->photos->count())
                   <img class="img-fluid" src="{{ url('img/portfolio/thumb') }}/{{ $project->photos()->where('main', '=', 1)->first() ? $project->photos()->where('main', '=', 1)->first()->name : $project->photos->first()->name }}">
                 @else
