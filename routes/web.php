@@ -28,6 +28,7 @@ Route::group( ['prefix' => 'admin'], function () {
     Route::rest('category', 'CategoryController', 'admin', ['index', 'create', 'edit', 'delete']);
     Route::rest('blog', 'BlogController', 'admin', ['index', 'create', 'edit', 'delete']);
     Route::rest('project', 'ProjectController', 'admin', ['index', 'create', 'edit', 'delete']);
+    Route::rest('realization', 'RealizationController', 'admin', ['index', 'create', 'edit', 'delete']);
     Route::rest('offer', 'OfferController', 'admin', ['index', 'create', 'edit', 'delete']);
 
     Route::post('/ajax/upload/{dir}', ['as' => 'ajax.upload', 'uses' => 'AjaxController@upload']);

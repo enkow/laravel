@@ -6,6 +6,8 @@ class Project extends Model
 {
 	use Support\MapRequest;
 
+	const PROJECT = 0;
+	const REALIZATION = 1;
 	protected $table = 'projects';
 
 	public function photos()

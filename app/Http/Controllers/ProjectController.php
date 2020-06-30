@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Foundation\Bus\DispatchesCommands;
-use App\Http\Controllers\BaseController;
 use App\Models\Project;
 use App\Models\Category;
 
@@ -15,7 +14,7 @@ class ProjectController extends BaseController
 
   public function index()
   {
-    $projects = Project::all();
+    $projects = Project::where('type', Project::PROJECT)->get();
 
     return $this->view('index', compact('projects'));
   }
@@ -45,6 +44,7 @@ class ProjectController extends BaseController
 
 		$project = new Project;
 		$project->mapRequest('*');
+		$project->type = Project::PROJECT;
 
     $counter = Project::where('slug', '=', str_slug($project->name))->count();
     if ($counter) {
@@ -90,6 +90,7 @@ class ProjectController extends BaseController
     ]);
 
     $project->mapRequest('*');
+    $project->type = Project::PROJECT;
 
     $counter = Project::where('id', '!=', $project->id)->where('slug', '=', str_slug($project->name))->count();
     if ($counter) {
