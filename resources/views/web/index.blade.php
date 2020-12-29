@@ -242,6 +242,9 @@
               <input type="text" name="name" class="form-home" placeholder="imię i nazwisko" required>
               <input type="email" name="email" class="form-home" placeholder="adres email" required>
               <textarea class="form-home" name="message" placeholder="treść" rows="5" required></textarea>
+              <div style="display: flex; justify-content: center; align-items: center;">
+                <div class="g-recaptcha" data-sitekey="{{ env('CAPTCHA_SITE', null) }}"></div>
+              </div>
               <button type="submit" class="btn portfolio-btn sent-btn btn-xl sr-button">wyślij</button>
             </form>
           </div>
@@ -262,6 +265,9 @@
 
     <!-- Custom scripts for this template -->
     <script src="{{url('/js')}}/scripts-sg.js"></script>
+
+    <!-- Google reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   </body>
 

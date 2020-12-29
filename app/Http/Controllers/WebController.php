@@ -124,6 +124,18 @@ class WebController extends BaseController
       return redirect()->route('home', '#contact')->withErrors('Wypełnij formularz poprawnie!');
     }
 
+    $captcha = $request->get('g-recaptcha-response');
+    if (!$captcha) {
+      return redirect()->route('home', '#contact')->withInput()->withErrors('Potwierdź, że nie jesteś robotem!');
+    }
+    $secretKey = env('CAPTCHA_SECRET', null);
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secretKey . "&response=" . $captcha . "&remoteip=" . $ip);
+    $responseKeys = json_decode($response, true);
+    if (intval($responseKeys["success"]) !== 1) {
+      return redirect()->route('home', '#contact')->withErrors('Nie możemy teraz wysłać wiadomości, spróbuj ponownie za kilka minut!');
+    }
+
     try {
       $sent = app('mailer')->send('mail.contact', ['name' => $request->name, 'msg' => $request->message, 'email' => $request->email], function ($mailer) {
         $mailer->to('biuro@studioarchemia.pl')->subject('Formularz kontaktowy');
