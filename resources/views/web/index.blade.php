@@ -78,8 +78,10 @@
           <hr>
           <p>Laboratorium architektury - projektowanie wnętrz</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> --}}
-          <img src="/img/studio-archemia.png" class="home-heading">
-          <p class="subtitle">laboratorium architektury | projektowanie wnętrz</p>
+
+
+{{--          <img src="/img/studio-archemia.png" class="home-heading">--}}
+{{--          <p class="subtitle">laboratorium architektury | projektowanie wnętrz</p>--}}
         </div>
       </div>
     </header>
@@ -91,12 +93,30 @@
             <h2 class="section-heading text-black">O NAS</h2>
             <img src="/img/o-nas.png" class="img-about">
             <p class="text-faded text-black text-center">
-              Z wykształcenia jesteśmy architektami i grafikami. Ukończyłyśmy Wydział Architektury i Urbanistyki na Politechnice Krakowskiej oraz Grafikę Komputerową na Akademii Górniczo-Hutniczej w Krakowie. Od ponad dziesięciu lat tworzymy energiczny duet, który świetnie się uzupełnia.<br><br>
-              Nasze <strong>projekty wystroju wnętrz</strong> charakteryzuje ciekawy design, styl i klasa. Kładziemy nacisk na ergonomię przestrzeni, tworząc unikalne wnętrza dostosowane do indywidualnych potrzeb i trybu życia klienta. <strong>Aranżacja wnętrz</strong> jest naszą pasją, dlatego stale śledzimy najnowsze trendy pojawiające się na rynku z zakresu nowoczesnych materiałów i technologii. To daje gwarancję, że zaprojektowane przez nas wnętrze będzie nietuzinkowe a inżynierskie wykształcenie dodatkowo pozwoli nam precyzyjnie dopracować każdy techniczny detal.<br><br>
-              Specjalizujemy się we wnętrzach nowoczesnych, lubimy minimalizm, styl skandynawski i loftowy. Kierujemy się zasadą, że najlepsze wnętrza to takie, które nie tylko pięknie wyglądają  ale w których wygodnie się mieszka.<br><br>
-              Współpracujemy z gronem wyspecjalizowanych fachowców.<br><br>
-              Z przyjemnością podejmiemy się zleceń obejmujących <strong>projektowanie wnętrz</strong> prywatnych i publicznych.<br><br>
-              Serdecznie zapraszamy do współpracy!<br><br>
+              <strong>Witaj na naszej stronie!</strong> Cieszymy się, że do nas trafiłeś. Studio Archemia tworzymy jako zgrany duet
+              Natalia i Barbara, który od ponad 10 lat idealnie się uzupełnia. Ukończyłyśmy Wydział Architektury na Politechnice Krakowskiej.
+              <strong>Aranżacja wnętrz</strong> jest dla nas zarówno przyjemnością jak i pracą twórczą. W <strong>projektowanie wnętrz</strong>
+              wkładamy energię, wiedzę i zaangażowanie.
+              Inżynierskie wykształcenie pozwala nam zadbać o każdy techniczny detal.<br><br>
+
+              <b><u>Wybrałyśmy ten zawód, ponieważ:</u></b><br>
+              - potrafimy słuchać i wcielać marzenia w życie,<br>
+              - interesują nas ciekawe i nieoczywiste rozwiązania,<br>
+              - lubimy się rozwijać, stale poszerzać wiedzę z zakresu nowych technologii,<br><br>
+
+              <b><u>Wybierając nas masz pewność, że:</u></b><br>
+              1. Pomożemy określić, co jest dla Ciebie ważne w użytkowaniu przestrzeni,<br>
+              2. Zwrócimy uwagę na szczegóły, o których nie pomyślałbyś urządzając wnętrze,<br>
+              3. Nasze <strong>projekty wystroju wnętrz</strong> będą odzwierciedleniem Twojego trybu życia, charakteru i przyzwyczajeń,<br>
+              4. Zadbamy o to, aby projekt wnętrza był wygodny i komfortowy, dostosowany do Ciebie,<br>
+              5. Połączymy wiedzę techniczną ze szczyptą kobiecego wyczucia,<br>
+              6. Zaproponujemy konkretne i praktyczne rozwiązania,<br>
+              7. Dopasujemy trendy z zakresu materiałów i technologii do Twoich potrzeb,<br>
+              8. Dostaniesz projekt gotowy do zrealizowania<br>
+              9. Sprawimy ze realizując swój projekt unikniesz niepotrzebnych stresów<br>
+              10. Poczujesz się świetnie w swoim wnętrzu. Zasługujesz na to!<br><br>
+
+              Masz wątpliwości? Zadzwoń, chętnie odpowiemy na Twoje pytania.
             </p>
           </div>
         </div>
