@@ -52,7 +52,7 @@
         $('.copy-btn').on("click", function(e){
             e.stopPropagation();
             e.preventDefault();
-            value = $(this).data('copy'); //Upto this I am getting value
+            value = $(this).data('copy');
 
             var tempInput = $("<input>");
             $("body").append(tempInput);
