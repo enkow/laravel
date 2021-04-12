@@ -13,10 +13,33 @@ use App\Models\Support\Paginator;
 use App\Models\Project;
 use App\Models\Category;
 use App\Models\Tag;
+use League\Glide\Responses\LaravelResponseFactory;
+use League\Glide\ServerFactory;
 
 class WebController extends BaseController
 {
   protected $prefix = 'web';
+
+    public function images(Request $request, $size, $image)
+    {
+        if (!file_exists(sprintf('%s/%s', storage_path('img/source'), $image))) {
+            abort(404);
+        }
+
+        $provider = ServerFactory::create([
+            'source' => storage_path('img/source'),
+            'cache' => storage_path('img/cache'),
+            'response' => new LaravelResponseFactory($request)
+        ]);
+
+        try {
+            list($width, $height) = explode('x', $size);
+        } catch (\Exception $e) {
+            return $provider->getImageResponse($image, []);
+        }
+
+        return $provider->getImageResponse($image, ['w' => (int)$width, 'h' => (int)$height, 'fit' => 'crop']);
+    }
 
   public function index()
   {
