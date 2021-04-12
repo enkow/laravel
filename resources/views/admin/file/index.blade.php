@@ -11,17 +11,26 @@
 
 @section('body')
     <div class="files_container col-xs-12">
-        @foreach($files as $file)
-            @if($file !== '.' && $file !== '..')
-                <div class="files_container-element col-md-2 col-xs-12">
-                    <div class="file-icons">
-                        <a href="#" class="file-btn copy-btn" data-copy="{{ route('img', ['x', $file]) }}"><i class="fa fa-2x fa-copy"></i></a>
-                        <a href="#" class='file-btn delete-btn' data-name="{{ $file }}"><i class="fa fa-2x fa-trash"></i></a>
+        @if($files->count() > 2)
+            @foreach($files as $file)
+                @if($file !== '.' && $file !== '..')
+                    <div class="files_container-element col-md-2 col-xs-12">
+                        <div class="file-icons">
+                            <a href="#" class="file-btn copy-btn" data-copy="{{ route('img', ['x', $file]) }}"><i class="fa fa-2x fa-copy"></i></a>
+                            <a href="#" class='file-btn delete-btn' data-name="{{ $file }}"><i class="fa fa-2x fa-trash"></i></a>
+                        </div>
+                        <img src="{{ route('img', ['200x200', $file]) }}">
                     </div>
-                    <img src="{{ route('img', ['200x200', $file]) }}">
+                @endif
+            @endforeach
+        @else
+            <div class="jumbotron jumbotron-fluid mt-5">
+                <div class="container">
+                    <h1 class="display-4">Brak wyników</h1>
+                    <p class="lead">Żaden plik nie został jeszcze dodany do biblioteki</p>
                 </div>
-            @endif
-        @endforeach
+            </div>
+        @endif
     </div>
 @stop
 
