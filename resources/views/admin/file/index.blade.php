@@ -14,7 +14,7 @@
         @if($files->count() > 2)
             @foreach($files as $file)
                 @if($file !== '.' && $file !== '..')
-                    <div class="files_container-element col-md-2 col-xs-12">
+                    <div class="files_container-element col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <div class="file-icons">
                             <a href="#" class="file-btn copy-btn" data-copy="{{ route('img', ['x', $file]) }}"><i class="fa fa-2x fa-copy"></i></a>
                             <a href="#" class='file-btn delete-btn' data-name="{{ $file }}"><i class="fa fa-2x fa-trash"></i></a>
