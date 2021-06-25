@@ -58,7 +58,7 @@
               <a class="nav-link js-scroll-trigger" href="#services">Oferta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="{{ route('portfolio.all') }}">Portfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
